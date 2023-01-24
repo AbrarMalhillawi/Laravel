@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.About{
+    display: inline-block;
+    margin: 10%;
+    margin-top: 5%;
+    padding: 10px 20px;
+}
+
+.About .Details{
+    float: left;
+    display: table;
+    padding: 15px 40px;
+    font-size: 15px;
+    height: 700px;
+    width: 40%;
+    letter-spacing: 3px;
+    background-color: #fff;
+}
+.Details h1{
+    font-size: 50px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 20%;
+}
+
+.Details p{
+    margin: 20px;
+    letter-spacing: 2px;
+}
+
+.Details .icons{
+    font-weight: bold;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 20%;
+}
+.Details .icons:hover{
+    opacity: 0.7;
+}
+
+.Details h3{
+    margin: 20px;
+}
+
+.About .image{
+    float: right;
+    height: 700px;
+    width: 50%;
+    background-color: rgb(193, 37, 185);
+}
+.image img{
+    border: 30px solid white;
+    margin-left: -20%;
+    margin-top: 15%;
+    width: 600px;
+    height: 400px;
+    box-shadow: 3px 3px 20px black;
+}
