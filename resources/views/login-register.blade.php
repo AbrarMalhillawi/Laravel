@@ -6,7 +6,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 
-@include('navbar');
+@include('navbar')
     <div class="body">
         <div class="cont">
             <div class="form sign-in">
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-@include('footer');
+@include('footer')
 
 <script type="text/javascript" src="JS/log-reg.js"></script>
 
