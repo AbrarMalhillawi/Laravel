@@ -272,7 +272,7 @@ section#welcome-text p{
 }
 /* book section */
 #book{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/explore-bg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/back.jpeg);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -289,6 +289,33 @@ section#welcome-text p{
 .book-form{
     flex: 1;
 }
+.book-form form {
+    width: 44em;
+    margin-left: 14em;
+}
+.book-form form  h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 2em;
+}
+.book-form form input {
+    color: white;
+
+}
+
+.book-form form input::placeholder {
+    color: white;
+}
+
+.book-form form textarea {
+    color: white;
+
+}
+
+.book-form form textarea::placeholder {
+    color: white;
+}
+
 .book-counter h3{
     font-size: 100px;
     margin-bottom: 20px;
@@ -327,7 +354,7 @@ input[type="text"], select, textarea{
     color: #000000;
     border: none;
     border-bottom: 1px solid #ccc;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -342,6 +369,7 @@ input[type="submit"]{
     padding:12px 0px;
     transition: all 0.5s ease;
     cursor: pointer;
+    border-radius: 25px;
 }
 /* Gallery Section */
 section#gallery{

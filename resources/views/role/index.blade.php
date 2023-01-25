@@ -21,76 +21,26 @@
 	<!----featured--->
 	<section class="featured" id="featured">
 		<div class="center-text">
-			<h2>Featured Categories</h2>
+			<h2>All Activity</h2>
 		</div>
 
 		<div class="featured-content">
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.17.14 PM (3).jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
+			{{-- @foreach ($collection as $item) --}}
+				
+					<a href="show">
+						<div class="row">
+							<img src="images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg">
+							<div class="fea-text">
+								{{-- <h5>{{$name_activity}}</h5> --}}
+								{{-- <p>{{$price_activity}}</p> --}}
+							</div>
+							
+						</div>
+					</a>
 
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.31 PM.jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.30 PM (1).jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.32 PM (1).jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.27 PM (1).jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
-
-			<div class="row">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.15.45 PM.jpeg">
-				<div class="fea-text">
-					<h5>Mens</h5>
-					<p>10 items</p>
-				</div>
-				<div class="arrow">
-					<a href="#"><i class='bx bx-right-arrow-alt' ></i></a>
-				</div>
-			</div>
-
+					
+			{{-- @endforeach --}}
+			
 		</div>
 	</section>
 
@@ -99,46 +49,26 @@
 	<!----new--->
 	<section class="new" id="new">
 		<div class="center-text">
-			<h2>New Arrivals</h2>
+			<h2>Sales</h2>
 		</div>
 
 		<div class="new-content">
-			<div class="box">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.17.12 PM.jpeg">
-				<h5>Lorem Ipsum dizgi</h5>
-				<h6>$188</h6>
-				<div class="sale">
-					<h4>Sale</h4>
-				</div>
-			</div>
 
-			<div class="box">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.15.43 PM (1).jpeg">
-				<h5>Lorem Ipsum dizgi</h5>
-				<h6>$188</h6>
-				<div class="sale">
-					<h4>Sale</h4>
-				</div>
-			</div>
+			{{-- @foreach ($collection as $item) --}}
+				<a href="show">
+					<div class="box">
+						<img src="images/WhatsApp Image 2023-01-24 at 3.16.30 PM.jpeg">
+						{{-- <h5>{{$name_activity}}</h5> --}}
+						{{-- <h6>{{$price_activity}}</h6> --}}
+						<div class="sale">
+							<h4>Sale</h4>
+						</div>
+					</div>
+				</a>
 
-			<div class="box">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.07 PM (1).jpeg">
-				<h5>Lorem Ipsum dizgi</h5>
-				<h6>$188</h6>
-				<div class="sale">
-					<h4>Sale</h4>
-				</div>
-			</div>
-
-			<div class="box">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.30 PM.jpeg">
-				<h5>Lorem Ipsum dizgi</h5>
-				<h6>$188s</h6>
-				<div class="sale">
-					<h4>Sale</h4>
-				</div>
-			</div>
-
+				
+			{{-- @endforeach --}}
+			
 		</div>
 	</section>
 

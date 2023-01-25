@@ -39,3 +39,11 @@ Route::get('/index', function () {
 });
 
 
+Route::get('/show', function () {
+    return view('role.show');
+});
+
+
+Route::get('/nav', function () {
+    return view('navbar');
+});
