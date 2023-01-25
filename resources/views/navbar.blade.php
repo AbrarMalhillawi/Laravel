@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="css/style.css">
 
-<div id="arrow">
-    <i class="fa fa-arrow-up"></i>
-</div>
+
 <nav>
     <div class="container">
         <div class="menu-par">

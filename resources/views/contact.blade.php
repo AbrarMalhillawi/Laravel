@@ -1,11 +1,11 @@
 @include('navbar')
 
-    
+    <link rel="stylesheet" href="css/contact.css">
     <!-- Book Now Section Start -->
     <section id="book">
         <div class="container">
             <div class="book-content-par">
-                <div class="book-counter">
+                {{-- <div class="book-counter">
                     <h3>Book Now</h3>
                     <div id="clockdiv">
                         <div>
@@ -29,16 +29,12 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="book-form">
                     <form>
+                        <h2>Contact US</h2>
                         <input type="text" id="fname" name="firstname" placeholder="Your Name...">
                         <input type="text" id="lname" name="lastname" placeholder="Your Last Name...">
-                        <select name="country" id="country">
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="india">USA</option>
-                        </select>
                         <textarea name="subject" id="subject" placeholder="Write something..."
                             style="height: 200px;"></textarea>
                         <input type="submit" value="Submit">
