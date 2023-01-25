@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
-    <title>Travel Website</title>
+    <title>at moment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
@@ -20,14 +20,15 @@
     @include('navbar')
 
     <header>
-        <div class="container">
+        <div class="divcontainer">
             <div class="header-info-par">
                 <h1 class="typewrite" data-period="2000"
                     data-type='["Happiness is closer than you think","Adventure Awaits, go find it.","Dont be a tourist, be a traveler."]'>
                 </h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, ea. Mollitia maiores voluptatum
-                    vitae suscipit tenetur ut officiis assumenda ipsam.</p>
-                <a href="#" class="a">Read More</a>
+                <h1> ALOHA</h1>
+                <p>ِِِِِِِadventurer <br> join us on the best trips . <br>
+                     We find the spirit of adventure, knowledge and learning the best methods through experience</p>
+                <a href="#" class="a">Book trip</a>
             </div>
             <div class="video">
                 <video id="video" autoplay loop muted>
@@ -39,12 +40,12 @@
     <!-- Second Slides Section -->
     <section id="welcome-text">
         <div class="container">
-            <h2>The Official Travel Site of the friendly Fiji Islands</h2>
-            <p>when an unknown printer took a gallery of type and scrambled it to make a type speicmen</p>
+            <h2>Some of our trips</h2>
+            <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
         </div>
     </section>
     <!-- Slides Section Start-->
-    <section id="slides-par">
+     <section id="slides-par">
         <div class="container">
             <div class="slides">
                 <div class="slide_1 slide_2">
@@ -92,12 +93,12 @@
     <section id="gallery">
         <div class="container">
             <div class="row">
-                <div align="center" class="filter-btn-par">
+                {{-- <div align="center" class="filter-btn-par">
                     <button class="filter-button" data-filter="all">ALL</button>
                     <button class="filter-button" data-filter="diving">DIVING</button>
                     <button class="filter-button" data-filter="nature">NATURE</button>
                     <button class="filter-button" data-filter="health">HEALTH</button>
-                </div>
+                </div> --}}
                 <div class="filter-gal-par">
                     <div class="gallery-item filter diving">
                         <img src="images/fiji-surprise/diving1.jpg" alt="" class="img-responsive">
@@ -123,6 +124,19 @@
                     <div class="gallery-item filter nature">
                         <img src="images/fiji-surprise/nature3.jpg" alt="" class="img-responsive">
                     </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/download.jpeg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/77.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/9.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/pexels-mwabonje-2042633.jpg" alt="" class="img-responsive">
+                    </div>
+                    
                 </div>
             </div>
         </div>

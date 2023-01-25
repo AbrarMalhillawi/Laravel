@@ -7,9 +7,16 @@
     list-style: none;
 }
 
-/* Conmmon Classes */
 .container{
-    max-width: 1200px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Conmmon Classes */
+.divcontainer{
+    max-width: 1300px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -143,15 +150,17 @@ video#video{
 .header-info-par a{
     background-color: #fff;
     color: #00a8b4;
-    padding: 17px 45px;
+    padding: 25px 70px;
+    border-radius: 50px;
     display: inline-block;
     margin-top: 25px;
     position: relative;
     overflow: hidden;
+    font-size: 20px;
 }
 
 .header-info-par a:after{
-    content: "Read More";
+    content: "to booking";
     position: absolute;
     top: 0;
     left: 0;
@@ -162,9 +171,12 @@ video#video{
     height: 100%;
     line-height: 50px;
     transition: all 0.5s ease;
+    font-size: 20px;
 }
 .header-info-par a:hover:after{
     width: 100%;
+    font-size: 20px;
+    padding: 9px 2px;
 }
 .header-info-par h1{
     font-size: 45px;
@@ -173,10 +185,12 @@ video#video{
     letter-spacing: 4px;
 }
 .header-info-par p{
-    line-height: 30px;
-    font-size: 15px;
-    width: 80%;
+    line-height: 40px;
+    font-size: 35px;
+    width: 90%;
     margin: auto;
+    margin-bottom: 10%;
+
 }
 
 /* Welcome-text section */
@@ -187,7 +201,7 @@ section#welcome-text h2{
 }
 section#welcome-text{
     text-align: center;
-    padding:100px 0px;
+    padding:66px 0px;
 }
 section#welcome-text p{
     color: #777;
@@ -196,18 +210,20 @@ section#welcome-text p{
 }
 /* Slides Section */
 .slides{
+    width: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: -100px;
 }
 .slide_1{
     /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/recipe_slides/recipe1.jpg); */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 60px;
-    min-width: 60px;
-    height: 300px;
+    width: 100px;
+    min-width: 170px;
+    /* height: 300px; */
     border-radius: 40px;
     margin: 0 15px;
     position: relative;
@@ -224,11 +240,11 @@ section#welcome-text p{
 }
 .slide-info{
     position: absolute;
-    bottom: 50px;
+    bottom: 15%;
     right: 0;
     color: #fff;
     transform: rotate(-90deg);
-    font-size: 13px;
+    font-size: 22px;
     font-weight: 700;
     transition: all 0.5s ease;
 }
@@ -490,42 +506,137 @@ section#blog{
     position: relative;
 } */
 
-/* Footer  */
 
-footer{
-    border-top: 3px solid #24253C;
-}
-.footer-par{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0px;
-}
-.footer-logo-h{
-    font-size: 30px;
-    color: #24253C;
-}
-.footer-1.footer-info h3{
-    color: #333;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-.footer-1.footer-info ul li a{
-    color: #333;
-    padding-bottom: 13px;
-    display: inline-block;
-    transition: all 0.5s ease;
-}
-.footer-1.footer-info ul li a:hover{
-    padding-left: 5px;
-}
-p.copyright{
-    background-color: #00a8c5;
+
+ 
+/* -----------------------------------------------------------------------------------------------start footer-------------------------------- */
+
+
+
+.footer2{
+	background: var(--text-color);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	gap: 2rem;
+    padding: 100px 14%;
+	background-color: black;
     color: #fff;
-    text-align: center;
-    padding: 20px 0px;
+    
+}
+.main-footer2 h3{
+	font-size: 23px;
+	margin-bottom: 1.6rem;
+	color: var(--bg-color);
+}
+.main-footer2 h5{
+	font-size: 15px;
+	font-weight: 600;
+	color: #555;
+}
+.icons{
+	display: flex;
+	margin-top: 2rem;
+}
+.icons i{
+	font-size: 25px;
+	margin-right: 1rem;
+	color: #555;
+	transition: all .35s ease;
+}
+.icons i:hover{
+	color: var(--bg-color);
+	transform: scale(1.1) translateY(-5px);
+}
+.main-footer2 li{
+	margin-bottom: 15px;
+}
+.main-footer2 li a{
+	display: block;
+	color: #555;
+	font-size: var(--normal-font);
+	font-weight: 600;
+	transition: all .35s ease;
+}
+.main-footer2 li a:hover{
+	transform: translateX(-8px);
+	color: var(--bg-color);
+}
+
+.last-text{
+	text-align: center;
+	padding: 20px;
+	background: var(--text-color);
+}
+.last-text p{
+	color: #555;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.top{
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+}
+.top i{
+	font-size: 22px;
+	color: var(--bg-color);
+	padding: 14px;
+	background: var(--main-color);
+	border-radius: 2rem;
 }
 
 
+@media (max-width: 1000px){
+	header{
+		padding: 7px 4%;
+		transition: .2s;
+	}
+	header.sticky{
+		padding: 14px 4%;
+		transition: .2s;
+	}
+	section{
+		padding: 80px 4%;
+		transition: .1s;
+	}
+}
+
+@media (max-width: 670px){
+	#menu-icon{
+		display: block;
+		cursor: pointer;
+	}
+	.header-icons{
+		display: inline-flex;
+	}
+	.navlist{
+		position: absolute;
+		top: 100%;
+		left: -100%;
+		width: 280px;
+		height: 120vh;
+		background: var(--bg-color);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 150px 30px;
+		transition: all .45s ease;
+	}
+	.navlist a{
+		display: block;
+		margin: 1.2rem 0;
+	}
+	.navlist.open{
+		left: 0;
+	}
+}
+
+/* ///////////// end index page //////////// */
+
+
+
+/* -----------------------------------------------------------------------------------------------end footer-------------------------------- */
 /* media queries */
 @media screen and (max-width: 768px) {
     div#toggle-btn{
@@ -559,6 +670,9 @@ p.copyright{
     .nav ul{
         margin-top: 100px;
     }
+    
+
+
     .header-info-par h1{
         font-size: 20px;
     }
@@ -566,7 +680,7 @@ p.copyright{
         padding: 0 40px;
     }
     .header-info-par p{
-        font-size: 14px;
+        font-size: 100px;
         line-height: 26px;
     }
     section#welcome-text h2{
