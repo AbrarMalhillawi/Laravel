@@ -1,91 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>responsive ecommerce website design</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-
-	<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <title>at moment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<!----header--->
-	@include('navbar')
+    @include('navbar')
 
-	<!----featured--->
-	<section class="featured" id="featured">
-		<div class="center-text">
-			<h2>All Activity</h2>
-		</div>
+   
+    <!-- Second Slides Section -->
+    <section id="welcome-text">
+        <div class="container">
+            <h2>Some of our trips</h2>
+            <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+     {{-- <section id="slides-par">
+        <div class="container">
+            <div class="slides">
+                <div class="slide_1 slide_2">
+                    <div class="slide-info">
+                        <p>Outer Islands</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_3">
+                    <div class="slide-info">
+                        <p>Pacific Harbour and Beqa</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_4">
+                    <div class="slide-info">
+                        <p>Savusavu & Surrounds</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_5">
+                    <div class="slide-info">
+                        <p>Suncoast</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_6">
+                    <div class="slide-info">
+                        <p>Taveun1</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_7">
+                    <div class="slide-info">
+                        <p>Yasawa Islands</p>
+                    </div>
+                </div>
+                <div class="slide_1 slide_8">
+                    <div class="slide-info">
+                        <p>Nadi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+    <!-- Slides Section Start-->
 
-		<div class="featured-content">
-			{{-- @foreach ($collection as $item) --}}
-				
-					<a href="show">
-						<div class="row">
-							<img src="images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg">
-							<div class="fea-text">
-								{{-- <h5>{{$name_activity}}</h5> --}}
-								{{-- <p>{{$price_activity}}</p> --}}
+
+    <!-- Gallery Section Starts -->
+    {{-- <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div align="center" class="filter-btn-par">
+                    <button class="filter-button" data-filter="all">ALL</button>
+                    <button class="filter-button" data-filter="diving">DIVING</button>
+                    <button class="filter-button" data-filter="nature">NATURE</button>
+                    <button class="filter-button" data-filter="health">HEALTH</button>
+                </div>
+                <div class="filter-gal-par">
+                    <div class="gallery-item filter diving">
+                        <img src="images/fiji-surprise/diving1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter diving">
+                        <img src="images/fiji-surprise/diving2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter diving">
+                        <img src="images/fiji-surprise/diving3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter health">
+                        <img src="images/fiji-surprise/health1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter health">
+                        <img src="images/fiji-surprise/health2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/nature1.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/nature2.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/nature3.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/download.jpeg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/77.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/9.jpg" alt="" class="img-responsive">
+                    </div>
+                    <div class="gallery-item filter nature">
+                        <img src="images/fiji-surprise/pexels-mwabonje-2042633.jpg" alt="" class="img-responsive">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section> --}}
+    <!-- Gallery Section Ends -->
+
+    <!-- Mutiple Slider Section Starts -->
+    <section id="water-slider">
+        <div class="container">
+			<h2>ٍShooting event</h2>
+            <p></p>
+
+
+			<section id="slides-par">
+				<div class="divcontainer">
+					<div class="slides">
+						<div class="slide_1 slide_2">
+							<div class="slide-info">
+								<p>Gun</p>
 							</div>
-							
 						</div>
-					</a>
-
-					
-			{{-- @endforeach --}}
-			
-		</div>
-	</section>
-
-    
-
-	<!----new--->
-	<section class="new" id="new">
-		<div class="center-text">
-			<h2>Sales</h2>
-		</div>
-
-		<div class="new-content">
-
-			{{-- @foreach ($collection as $item) --}}
-				<a href="show">
-					<div class="box">
-						<img src="images/WhatsApp Image 2023-01-24 at 3.16.30 PM.jpeg">
-						{{-- <h5>{{$name_activity}}</h5> --}}
-						{{-- <h6>{{$price_activity}}</h6> --}}
-						<div class="sale">
-							<h4>Sale</h4>
+						<div class="slide_1 slide_3">
+							<div class="slide-info">
+								<p>Pistol</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_4">
+							<div class="slide-info">
+								<p>Sniper</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_5">
+							<div class="slide-info">
+								<p>Bow</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_6">
+							<div class="slide-info">
+								<p>Assault</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_7">
+							<div class="slide-info">
+								<p>Shatguns</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_8">
+							<div class="slide-info">
+								<p>Old Guns</p>
+							</div>
 						</div>
 					</div>
-				</a>
+				</div>
+			</section>
+        </div>
+    </section>
 
-				
-			{{-- @endforeach --}}
-			
-		</div>
-	</section>
-
-
-	
-	<!----contact--->
-	
-	@include('footer')
-
-	<!----scroll top--->
-	<a href="#" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+	<br><br><br><br><br>
+	{{-- ------------------------------------------------------------------------------- --}}
+	<section id="water-slider">
+        <div class="container">
+			<h2>Some of our trips</h2>
+            <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
 
 
-	<script src="https://unpkg.com/scrollreveal"></script>
+			<section id="slides-par">
+				<div class="divcontainer">
+					<div class="slides">
+						<div class="slide_1 slide_2">
+							<div class="slide-info">
+								<p>Outer Islands</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_3">
+							<div class="slide-info">
+								<p>Pacific Harbour and Beqa</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_4">
+							<div class="slide-info">
+								<p>Savusavu & Surrounds</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_5">
+							<div class="slide-info">
+								<p>Suncoast</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_6">
+							<div class="slide-info">
+								<p>Taveun1</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_7">
+							<div class="slide-info">
+								<p>Yasawa Islands</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_8">
+							<div class="slide-info">
+								<p>Nadi</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+        </div>
+    </section>
+    <!-- Blog Section Starts -->
+  
+    <!-- Mutiple Slider Section Ends -->
 
-	<!----custom js link--->
-	<script src="JS/script.js"></script>
-	
+@include('footer')
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/extrenaljq.js"></script>
 </body>
+
 </html>
