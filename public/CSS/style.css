@@ -16,6 +16,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.container h2{
+    font-size: 50px;
+}
 
 
 .container{
@@ -196,6 +199,8 @@ section#welcome-text p{
     transition: all 0.5s ease;
 }
 
+/* -------------------------------shoting------------------------------------------------- */
+
 .slide_2{ 
     background-image:url(../images/shooting/gun.jpeg);
 }
@@ -217,6 +222,102 @@ section#welcome-text p{
 .slide_8{ 
     background-image:url(../images/shooting/old\ guns.jpeg);
 }
+
+
+
+
+
+
+/* ----------------------222-----------sea trips------------------------------------------- */
+
+.slide_22{ 
+    background-image:url(../images/sea/Swimming\ races.jpeg);
+}
+.slide_33{ 
+    background-image:url(../images/sea/Fly\ fishing.jpeg);
+}
+.slide_44{ 
+    background-image:url(../images/sea/Net\ fishing.jpg);
+}
+.slide_55{ 
+    background-image:url(../images/sea/Fishing\ on\ a\ boat.jpeg);
+}
+.slide_66{ 
+    background-image:url(../images/sea/Diving.jpeg);
+}
+.slide_77{ 
+    background-image:url(../images/sea/Party\ boat.jpeg);
+}
+.slide_88{ 
+    background-image:url(../images/sea/small\ boat\ trip.jpg);
+}
+
+
+
+
+#water-slider11{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/sea/back.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    color: #fff;
+    text-align: center;
+} 
+
+
+
+
+
+/* ----------------------------------------------------------------------- */
+/* book section */
+
+
+
+
+
+/* -------------------------------333--land Events------------------------------------------- */
+
+.slide_222{ 
+    background-image:url(../images/land/desert\ ride.jpg);
+}
+.slide_333{ 
+    background-image:url(../images/land/horseback\ riding.jpeg);
+}
+.slide_444{ 
+    background-image:url(../images/land/long\ walk.jpeg);
+}
+.slide_555{ 
+    background-image:url(../images/land/Mountaineering.jpeg);
+}
+.slide_666{ 
+    background-image:url(../images/land/Camel\ ride.jpg);
+}
+.slide_777{ 
+    background-image:url(../images/land/blimp.jpeg);
+}
+.slide_888{ 
+    background-image:url(../images/land/Basketball.jpeg);
+}
+
+
+
+
+#water-slider111{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/land/back.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+    color: #fff;
+    text-align: center;
+} 
+
+
+
+
+
+/* ----------------------------------------------------------------------- */
 /* book section */
 #book{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/back.jpeg);

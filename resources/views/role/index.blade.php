@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    @include('navbar')
+    {{-- @include('navbar') --}}
 
    
     <!-- Second Slides Section -->
     <section id="welcome-text">
         <div class="container">
-            <h2>Some of our trips</h2>
+            <h2>Some of our Events</h2>
             <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
         </div>
     </section>
@@ -129,7 +129,7 @@
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
         <div class="container">
-			<h2>ٍShooting event</h2>
+			<h2>ٍShooting Events</h2>
             <p></p>
 
 
@@ -177,50 +177,50 @@
         </div>
     </section>
 
-	<br><br><br><br><br>
+	<br><br>
 	{{-- ------------------------------------------------------------------------------- --}}
-	<section id="water-slider">
+	<section id="water-slider11">
         <div class="container">
-			<h2>Some of our trips</h2>
-            <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
+			<h2>Sea Events</h2>
+            <p></p>
 
 
 			<section id="slides-par">
 				<div class="divcontainer">
 					<div class="slides">
-						<div class="slide_1 slide_2">
+						<div class="slide_1 slide_22">
 							<div class="slide-info">
-								<p>Outer Islands</p>
+								<p>Swimming races</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_3">
+						<div class="slide_1 slide_33">
 							<div class="slide-info">
-								<p>Pacific Harbour and Beqa</p>
+								<p>Fly fishing</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_4">
+						<div class="slide_1 slide_44">
 							<div class="slide-info">
-								<p>Savusavu & Surrounds</p>
+								<p>Net fishing</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_5">
+						<div class="slide_1 slide_55">
 							<div class="slide-info">
-								<p>Suncoast</p>
+								<p>Fishing on a boat</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_6">
+						<div class="slide_1 slide_66">
 							<div class="slide-info">
-								<p>Taveun1</p>
+								<p>Diving</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_7">
+						<div class="slide_1 slide_77">
 							<div class="slide-info">
-								<p>Yasawa Islands</p>
+								<p>Party boat</p>
 							</div>
 						</div>
-						<div class="slide_1 slide_8">
+						<div class="slide_1 slide_88">
 							<div class="slide-info">
-								<p>Nadi</p>
+								<p>small boat trip</p>
 							</div>
 						</div>
 					</div>
@@ -228,11 +228,62 @@
 			</section>
         </div>
     </section>
-    <!-- Blog Section Starts -->
+    
+	<br><br>
+	{{-- ------------------------------------------------------------------------------- --}}
+	<section id="water-slider111">
+        <div class="container">
+			<h2>Interesting Events</h2>
+            <p></p>
+
+
+			<section id="slides-par">
+				<div class="divcontainer">
+					<div class="slides">
+						<div class="slide_1 slide_222">
+							<div class="slide-info">
+								<p>Desert trip</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_333">
+							<div class="slide-info">
+								<p>Horse riding</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_444">
+							<div class="slide-info">
+								<p>Long walk</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_555">
+							<div class="slide-info">
+								<p>Mountaineering</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_666">
+							<div class="slide-info">
+								<p>Camel ride</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_777">
+							<div class="slide-info">
+								<p>Blimp</p>
+							</div>
+						</div>
+						<div class="slide_1 slide_888">
+							<div class="slide-info">
+								<p>Basketball</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+        </div>
+    </section>
   
     <!-- Mutiple Slider Section Ends -->
 
-@include('footer')
+{{-- @include('footer') --}}
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
