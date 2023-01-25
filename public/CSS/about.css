@@ -1,3 +1,17 @@
+
+* {
+  /* Page Reset */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* Site Font */
+  font-weight: 300;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  
+  font-family: 'Nunito', sans-serif;
+
+}
 body{
     margin: 0;
     padding: 0;
@@ -15,18 +29,6 @@ body{
     --main-green: #344436;
     --main-light-green: #82B060;
     --blue: #0479F1;
-  }
-  
-  * {
-    /* Page Reset */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* Site Font */
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    scroll-behavior: smooth;
   }
 
 h1, h2 {

@@ -1,35 +1,11 @@
 @include('navbar')
 
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Book Now Section Start -->
     <section id="book">
         <div class="container">
             <div class="book-content-par">
-                {{-- <div class="book-counter">
-                    <h3>Book Now</h3>
-                    <div id="clockdiv">
-                        <div>
-                            <span class="days"></span>
-                            <div class="smalltext">Days</div>
-
-                        </div>
-                        <div>
-                            <span class="hours"></span>
-                            <div class="smalltext">Hours</div>
-
-                        </div>
-                        <div>
-                            <span class="minutes"></span>
-                            <div class="smalltext">Minutes</div>
-
-                        </div>
-                        <div>
-                            <span class="seconds"></span>
-                            <div class="smalltext">Seconds</div>
-
-                        </div>
-                    </div>
-                </div> --}}
+                
                 <div class="book-form">
                     <form>
                         <h2>Contact US</h2>
