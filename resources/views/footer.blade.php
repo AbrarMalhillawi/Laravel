@@ -1,8 +1,8 @@
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/index.css">
 
-    <!-- Footer Starts-->
+
+   
     
     <section class="footer2" id="footer2">
 		<div class="main-footer2">
