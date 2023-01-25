@@ -33,3 +33,9 @@ Route::get('/about', function () {
 });
 
 
+
+Route::get('/index', function () {
+    return view('role.index');
+});
+
+

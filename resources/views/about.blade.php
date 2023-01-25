@@ -1,6 +1,7 @@
 @include('navbar')
 
     <link rel="stylesheet" href="css/about.css">
+
     <div class="About">
         <div class="Details">
             <h1>

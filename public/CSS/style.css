@@ -107,7 +107,7 @@ nav{
 .nav-fixed ul li a{
     color: #00a8b4;
 }
-
+/* //// */
 header{
     width: 100%;
     height: 100vh;
@@ -302,14 +302,15 @@ div#clockdiv span{
     display: inline-block;
 }
 input[type="text"]:focus, select:focus, textarea:focus{
-    border:2px solid #00a8b4;
     outline: none;
+
 }
 input[type="text"], select, textarea{
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    color: #00a8c5;
-    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    border-bottom: 1px solid #ccc;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px;
@@ -464,7 +465,7 @@ section#blog{
 /* Footer  */
 
 footer{
-    border-top: 3px solid #00a8c5;
+    border-top: 3px solid #24253C;
 }
 .footer-par{
     display: flex;
@@ -473,7 +474,7 @@ footer{
 }
 .footer-logo-h{
     font-size: 30px;
-    color: #00a8c5;
+    color: #24253C;
 }
 .footer-1.footer-info h3{
     color: #333;
@@ -495,6 +496,7 @@ p.copyright{
     text-align: center;
     padding: 20px 0px;
 }
+
 
 /* media queries */
 @media screen and (max-width: 768px) {

@@ -10,9 +10,9 @@
     <div class="body">
         <div class="cont">
             <div class="form sign-in">
-            <h2>Sign In</h2>
+            <h2>Login</h2>
             <label>
-                <span>Email Address</span>
+                <span>Email</span>
                 <input type="email" name="email">
             </label>
             <label>
@@ -43,28 +43,37 @@
                 <p>If you already has an account, just sign in. We've missed you!</p>
                 </div>
                 <div class="img-btn">
-                <span class="m-up">Sign Up</span>
-                <span class="m-in">Sign In</span>
+                <span class="m-up">Register</span>
+                <span class="m-in">Login</span>
                 </div>
             </div>
             <div class="form sign-up">
-                <h2>Sign Up</h2>
-                <label>
-                <span>Name</span>
-                <input type="text">
+                <h2>Register</h2>
+                <label class="name">
+                    <span>First Name</span>
+                    <input type="text">
                 </label>
-                <label>
-                <span>Email</span>
-                <input type="email">
+
+                <label class="name">
+                    <span>Last Name</span>
+                    <input type="text">
                 </label>
-                <label>
-                <span>Password</span>
-                <input type="password">
+                <br>
+                <label class="e-p">
+                    <span>Email</span>
+                    <input type="email">
                 </label>
-                <label>
-                <span>Confirm Password</span>
-                <input type="password">
+                <br>
+                <label class="e-p">
+                    <span>Password</span>
+                    <input type="password">
                 </label>
+                <br>
+                <label class="e-p">
+                    <span>Confirm Password</span>
+                    <input type="password">
+                </label>
+
                 <button type="button" class="submit">Sign Up Now</button>
             </div>
             </div>

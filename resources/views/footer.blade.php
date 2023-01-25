@@ -1,37 +1,41 @@
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
     <!-- Footer Starts-->
-    <footer>
-        <div class="container">
-            <div class="footer-par">
-                <div class="footer-1 ">
-                    <h3 class="footer-logo-h">Travel</h3>
-                </div>
-                <div class="footer-1 footer-info">
-                    <h3>Tourism Fiji</h3>
-                    <ul>
-                        <li><a href="">Tourism Fiji One</a></li>
-                        <li><a href="">Tourism Fiji Two</a></li>
-                        <li><a href="">Tourism Fiji Three</a></li>
-                        <li><a href="">Tourism Fiji Four</a></li>
-                    </ul>
-                </div>
-                <div class="footer-1 footer-info">
-                    <h3>Find Your Happy</h3>
-                    <ul>
-                        <li><a href="">Tourism Fiji One</a></li>
-                        <li><a href="">Tourism Fiji Two</a></li>
-                        <li><a href="">Tourism Fiji Three</a></li>
-                    </ul>
-                </div>
-                <div class="footer-1 footer-info">
-                    <h3>Need Help?</h3>
-                    <ul>
-                        <li><a href="">Tourism Fiji One</a></li>
-                        <li><a href="">Tourism Fiji Two</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <p class="copyright">Copyright © 2021 Created By Chiranjeev Vishnoi</p>
-    </footer>
+    
+    <section class="footer2" id="footer2">
+		<div class="main-footer2">
+			<h3>Classix</h3>
+			<h5>Let's Connect With Us</h5>
+			<div class="icons">
+				<a href="#"><i class='bx bxl-facebook-square' ></i></a>
+				<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+				<a href="#"><i class='bx bxl-twitter' ></i></a>
+			</div>
+		</div>
+
+		<div class="main-footer2">
+			<h3>Explore</h3>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#featured">Featured</a></li>
+			<li><a href="#new">New</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</div>
+
+		<div class="main-footer2">
+			<h3>Our Services</h3>
+			<li><a href="#">Pricing</a></li>
+			<li><a href="#">Free Shipping</a></li>
+			<li><a href="#">Gift Cards</a></li>
+		</div>
+
+		<div class="main-footer2">
+			<h3>Shopping</h3>
+			<li><a href="#">Clothing Store</a></li>
+			<li><a href="#">Trending Shoes</a></li>
+			<li><a href="#">Accessories</a></li>
+			<li><a href="#">Sale</a></li>
+		</div>
+
+	</section>

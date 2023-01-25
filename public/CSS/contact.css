@@ -8,7 +8,7 @@
 
 .contact{
     min-height: 100vh;
-    background: #08071d;
+    /* background: #08071d; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +21,13 @@
     justify-content: center;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     border-radius: 15px;
-    background: rgba(255,255,255,0.1);
+    background: #24253C;
     backdrop-filter: blur(10px);
     flex-wrap: wrap;
 }
 
 .contact form h1{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 500;
     margin-top: 20px;
     width: 500px;
@@ -43,11 +43,12 @@
     font-size: 15px;
     margin-bottom: 10px;
     background: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
 }
 
 .contact form input::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .contact form #lastName,
@@ -56,7 +57,7 @@
 }
 
 .contact form h4{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 300;
     width: 600px;
     margin-top: 20px;
@@ -65,8 +66,8 @@
 .contact form textarea{
     background: none;
     border: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-weight: 200;
     font-size: 15px;
     padding: 10px;
@@ -87,12 +88,12 @@ textarea::-webkit-scrollbar-thumb{
 
 .contact form #button{
     border: none;
-    background: #fff;
+    background: #E53854;
     border-radius: 5px;
     margin-top: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #333;
+    font-weight: 500;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
     width: 100px;
     padding: 0;
     margin-right: 500px;
