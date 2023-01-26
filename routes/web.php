@@ -35,9 +35,9 @@ Route::get('/about', function () {
 
 
 
-// Route::get('/index', function () {
-//     return view('role.index');
-// });
+Route::get('/user', function () {
+    return view('user_profile');    
+});
 
 
 // Route::get('/show', function () {
