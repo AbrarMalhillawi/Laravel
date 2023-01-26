@@ -14,6 +14,15 @@
     <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
     <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+
+	<style>
+		.Login,.Home,.Contact,.About{
+			background-color: none;
+		}
+		.Events {
+			background-color: #E53854;
+		}
+	  </style>
 </head>
 
 <body>

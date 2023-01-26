@@ -35,6 +35,20 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+/* /////////////////// */
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.item .owl-img-par img {
+    /* aspect-ratio: 2/3; */
+    width: 500px;
+    height: 500px;
+}
+
+/* /////////////////// */
 
 
 p{
@@ -479,7 +493,7 @@ button.filter-button:focus{
 }
 .owl-img-par{
     position: relative;
-    width: 500px;
+    width: 100%;
     overflow: hidden;
 }
 .owl-img-info{
@@ -691,142 +705,51 @@ section#blog{
 }
 
 /* ====================== slider ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 .slider{
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EFEFEF;
+    padding-top: 150px;
 }
-.slide-container{
-  max-width: 1120px;
-  width: 100%;
-  padding: 40px 0;
+h2{
+    text-align: center;
+    padding: 20px;
 }
-.slide-content{
-  margin: 0 40px;
-  overflow: hidden;
-  border-radius: 25px;
+.slick-slide{
+    margin: 0 20px;
 }
-.card{
-  border-radius: 25px;
-  background-color: #FFF;
+.slick-slide img{
+    width: 100%;
 }
-.image-content,
-.card-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px;
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
 }
-.image-content{
-  position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
-.overlay{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #4070F4;
-  border-radius: 25px 25px 0 25px;
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
 }
-.overlay::before,
-.overlay::after{
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -40px;
-  height: 40px;
-  width: 40px;
-  background-color: #4070F4;
-}
-.overlay::after{
-  border-radius: 0 25px 0 0;
-  background-color: #FFF;
-}
-.card-image{
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #FFF;
-  padding: 3px;
-}
-.card-image .card-img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-}
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-}
-.button{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button:hover{
-  background: #265DF2;
-}
-
-.swiper-navBtn{
-  color: #6E93f7;
-  transition: color 0.3s ease;
-}
-.swiper-navBtn:hover{
-  color: #4070F4;
-}
-.swiper-navBtn::before,
-.swiper-navBtn::after{
-  font-size: 35px;
-}
-.swiper-button-next{
-  right: 0;
-}
-.swiper-button-prev{
-  left: 0;
-}
-.swiper-pagination-bullet{
-  background-color: #6E93f7;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active{
-  background-color: #4070F4;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .swiper-navBtn{
+.slick-slide{
     display: none;
-  }
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.copy{
+    padding-top: 250px;
 }

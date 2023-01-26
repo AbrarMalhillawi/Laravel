@@ -1,5 +1,14 @@
 @include('navbar')
 
+  <style>
+    .Login,.Home,.Contact,.Events{
+        background-color: none;
+    }
+    .About {
+        background-color: #E53854;
+    }
+  </style>
+  
     <link rel="stylesheet" href="css/about.css">
 
     <section id="about">

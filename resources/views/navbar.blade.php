@@ -17,6 +17,7 @@
 					<li><a href="/contact">Contact US</a></li>
 					<li><a href="login">Login</a></li>
 					<li><a href="{{ route('signout') }}">LogOut</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -27,11 +28,11 @@
 
 </div>
 
-<script>
+{{-- <script>
 	var hamburger = document.querySelector(".hamburger");
 	var menu = document.querySelector(".menu");
 
 	hamburger.addEventListener("click", function(){
 		menu.classList.toggle("active");
 	})
-</script>
+</script> --}}

@@ -2,7 +2,14 @@
 <link rel="stylesheet" type="text/css" href="CSS/log-reg.css">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-
+<style>
+    .Contact,.Home,.About,.Events{
+        background-color: none;
+    }
+    .Login {
+        background-color: #E53854;
+    }
+</style>
 
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 

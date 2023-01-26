@@ -1,4 +1,12 @@
 @include('navbar')
+    <style>
+        .Login,.Home,.About,.Events{
+            background-color: none;
+        }
+        .Contact {
+            background-color: #E53854;
+        }
+    </style>
 
     <link rel="stylesheet" href="css/style.css">
     <!-- Book Now Section Start -->
