@@ -41,6 +41,7 @@ class CustomAuthController extends Controller
 
         return redirect('/login')->with('message', 'Login details are not valid!');
     }
+
     public function signupsave(Request $request)
     {
       
@@ -61,8 +62,11 @@ class CustomAuthController extends Controller
       return User::create([
         'name' => $data['name'],
         'email' => $data['email'],
-        'password' => Hash::make($data['password'])
+        'email_verified_at' => null,
+         'role' => 0,
+        'password' => $data['passwprd']
       ]);
+    //   Hash::make($data['password'])
     }
 
 
@@ -70,7 +74,7 @@ class CustomAuthController extends Controller
     {
         if(Auth::check()){
             if(Auth::user()->role == 1){
-                return view('dashboard');
+                return redirect('activity');
             } 
             return redirect('/');
         }

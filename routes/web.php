@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\admin\ActivityController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -53,6 +54,7 @@ Route::get('/about', function () {
 
 
 Route::resource('activity',ActivityController ::class);
+Route::resource('user',UserController ::class);
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
