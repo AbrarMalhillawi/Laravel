@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
     <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -37,113 +38,15 @@
             </div>
         </div>
     </header>
-    <!-- Second Slides Section -->
+
     <section id="welcome-text">
         <div class="container">
             <h2>Some of our trips</h2>
             <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
         </div>
     </section>
-    <!-- Slides Section Start-->
-     <section id="slides-par">
-        <div class="container">
-            <div class="slides">
-                <div class="slide_1 slide_2">
-                    <div class="slide-info">
-                        <p>Outer Islands</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_3">
-                    <div class="slide-info">
-                        <p>Pacific Harbour and Beqa</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_4">
-                    <div class="slide-info">
-                        <p>Savusavu & Surrounds</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_5">
-                    <div class="slide-info">
-                        <p>Suncoast</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_6">
-                    <div class="slide-info">
-                        <p>Taveun1</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_7">
-                    <div class="slide-info">
-                        <p>Yasawa Islands</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_8">
-                    <div class="slide-info">
-                        <p>Nadi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Slides Section Start-->
-
-
-    <!-- Gallery Section Starts -->
-    <section id="gallery">
-        <div class="container">
-            <div class="row">
-                {{-- <div align="center" class="filter-btn-par">
-                    <button class="filter-button" data-filter="all">ALL</button>
-                    <button class="filter-button" data-filter="diving">DIVING</button>
-                    <button class="filter-button" data-filter="nature">NATURE</button>
-                    <button class="filter-button" data-filter="health">HEALTH</button>
-                </div> --}}
-                <div class="filter-gal-par">
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter health">
-                        <img src="images/fiji-surprise/health1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter health">
-                        <img src="images/fiji-surprise/health2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/download.jpeg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/77.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/9.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/pexels-mwabonje-2042633.jpg" alt="" class="img-responsive">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Gallery Section Ends -->
-
-    <!-- Mutiple Slider Section Starts -->
+  
+ 
     <section id="water-slider">
         <div class="container">
             <h3>Start Planning Your Dream Holiday</h3>
@@ -196,91 +99,190 @@
             </div>
         </div>
     </section>
-    <!-- Blog Section Starts -->
-    <section id="blog">
-        <div class="container">
-            <h3>News And Events</h3>
-            <div class="blog-par">
-                <div class="blog-content">
-                    <!-- one div for image and one for info -->
-                    <div class="blog-img-par">
-                        <img src="images/slider/bangcok.jpg" alt="" class="img-responsive">
+   
+  
 
+    <section class="slider">
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+                                        
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile1.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
                     </div>
-                    <div class="blog-info-par">
-                        <ul>
-                            <li>Chiru Vishnoi</li>
-                            <li>24.08.2021</li>
-                        </ul>
-                        <h4>Lorem ipsum dolor consectetur</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
-                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
 
+                            <div class="card-image">
+                                <!--<img src="images/profile2.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
                     </div>
-                </div>
-                <div class="blog-content">
-                    <!-- one div for image and one for info -->
-                    <div class="blog-img-par">
-                        <img src="images/slider/cario.jpg" alt="" class="img-responsive">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
 
+                            <div class="card-image">
+                                <!--<img src="images/profile3.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
                     </div>
-                    <div class="blog-info-par">
-                        <ul>
-                            <li>Chiru Vishnoi</li>
-                            <li>24.08.2021</li>
-                        </ul>
-                        <h4>Lorem ipsum dolor consectetur</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
-                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
 
+                            <div class="card-image">
+                                <!--<img src="images/profile4.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile5.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile6.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile7.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile8.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <!--<img src="images/profile9.jpg" alt="" class="card-img">-->
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">David Dell</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="blog-par">
-                <div class="blog-content">
-                    <!-- one div for image and one for info -->
-                    <div class="blog-img-par">
-                        <img src="images/slider/bangcok.jpg" alt="" class="img-responsive">
 
-                    </div>
-                    <div class="blog-info-par">
-                        <ul>
-                            <li>Chiru Vishnoi</li>
-                            <li>24.08.2021</li>
-                        </ul>
-                        <h4>Lorem ipsum dolor consectetur</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
-                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
-
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <!-- one div for image and one for info -->
-                    <div class="blog-img-par">
-                        <img src="images/slider/cario.jpg" alt="" class="img-responsive">
-
-                    </div>
-                    <div class="blog-info-par">
-                        <ul>
-                            <li>Chiru Vishnoi</li>
-                            <li>24.08.2021</li>
-                        </ul>
-                        <h4>Lorem ipsum dolor consectetur</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut natus, deserunt deleniti
-                            sapiente omnis ab quas mollitia! Cumque, maxime at.</p>
-
-                    </div>
-                </div>
-            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
         </div>
+        
+
+    <!-- Swiper JS -->
+      <!--Uncomment this line-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+      <!--Uncomment this line-->
+    <script src="JS/script.js"></script>
+
     </section>
-    <!-- Mutiple Slider Section Ends -->
 
-@include('footer')
-
+    
+    @include('footer')
+    
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/extrenaljq.js"></script>
+
 </body>
 
 </html>

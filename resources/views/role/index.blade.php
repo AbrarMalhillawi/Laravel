@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    {{-- @include('navbar') --}}
+    @include('navbar')
 
    
     <!-- Second Slides Section -->
@@ -27,104 +27,6 @@
             <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
         </div>
     </section>
-    <!-- Slides Section Start-->
-     {{-- <section id="slides-par">
-        <div class="container">
-            <div class="slides">
-                <div class="slide_1 slide_2">
-                    <div class="slide-info">
-                        <p>Outer Islands</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_3">
-                    <div class="slide-info">
-                        <p>Pacific Harbour and Beqa</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_4">
-                    <div class="slide-info">
-                        <p>Savusavu & Surrounds</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_5">
-                    <div class="slide-info">
-                        <p>Suncoast</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_6">
-                    <div class="slide-info">
-                        <p>Taveun1</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_7">
-                    <div class="slide-info">
-                        <p>Yasawa Islands</p>
-                    </div>
-                </div>
-                <div class="slide_1 slide_8">
-                    <div class="slide-info">
-                        <p>Nadi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Slides Section Start-->
-
-
-    <!-- Gallery Section Starts -->
-    {{-- <section id="gallery">
-        <div class="container">
-            <div class="row">
-                <div align="center" class="filter-btn-par">
-                    <button class="filter-button" data-filter="all">ALL</button>
-                    <button class="filter-button" data-filter="diving">DIVING</button>
-                    <button class="filter-button" data-filter="nature">NATURE</button>
-                    <button class="filter-button" data-filter="health">HEALTH</button>
-                </div>
-                <div class="filter-gal-par">
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter diving">
-                        <img src="images/fiji-surprise/diving3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter health">
-                        <img src="images/fiji-surprise/health1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter health">
-                        <img src="images/fiji-surprise/health2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature1.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/nature3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/download.jpeg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/77.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/9.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="gallery-item filter nature">
-                        <img src="images/fiji-surprise/pexels-mwabonje-2042633.jpg" alt="" class="img-responsive">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Gallery Section Ends -->
 
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
@@ -138,37 +40,58 @@
 					<div class="slides">
 						<div class="slide_1 slide_2">
 							<div class="slide-info">
-								<p>Gun</p>
+									<a href="/show">
+										<p>Gun</p>
+									</a>
+								</div>
 							</div>
-						</div>
+
 						<div class="slide_1 slide_3">
 							<div class="slide-info">
-								<p>Pistol</p>
+								<a href="/show">
+
+									<p>Pistol</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_4">
 							<div class="slide-info">
-								<p>Sniper</p>
+								<a href="/show">
+
+									<p>Sniper</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_5">
 							<div class="slide-info">
-								<p>Bow</p>
+								<a href="/show">
+
+									<p>Bow</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_6">
 							<div class="slide-info">
-								<p>Assault</p>
+								<a href="/show">
+
+									<p>Assault</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_7">
 							<div class="slide-info">
-								<p>Shatguns</p>
+								<a href="/show">
+
+									<p>Shatguns</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_8">
 							<div class="slide-info">
-								<p>Old Guns</p>
+								<a href="/show">
+
+									<p>Old Guns</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -190,37 +113,58 @@
 					<div class="slides">
 						<div class="slide_1 slide_22">
 							<div class="slide-info">
-								<p>Swimming races</p>
+								<a href="">
+									<p>Swimming races</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_33">
 							<div class="slide-info">
-								<p>Fly fishing</p>
+								<a href="">
+									<p>Fly fishing</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_44">
 							<div class="slide-info">
-								<p>Net fishing</p>
+								<a href="">
+									<p>Net fishing</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_55">
 							<div class="slide-info">
-								<p>Fishing on a boat</p>
+								<a href="">
+									<p>Fishing on a boat</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_66">
 							<div class="slide-info">
-								<p>Diving</p>
+								<a href="">
+									<p>Diving</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_77">
 							<div class="slide-info">
-								<p>Party boat</p>
+								<a href="">
+									<p>Party boat</p>
+
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_88">
 							<div class="slide-info">
-								<p>small boat trip</p>
+								<a href="">
+									<p>small boat trip</p>
+
+								</a>
 							</div>
 						</div>
 					</div>
@@ -242,37 +186,51 @@
 					<div class="slides">
 						<div class="slide_1 slide_222">
 							<div class="slide-info">
-								<p>Desert trip</p>
+								<a href="">
+									<p>Desert trip</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_333">
 							<div class="slide-info">
-								<p>Horse riding</p>
+								<a href="">
+									<p>Horse riding</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_444">
 							<div class="slide-info">
-								<p>Long walk</p>
+								<a href="">
+									<p>Long walk</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_555">
 							<div class="slide-info">
-								<p>Mountaineering</p>
+								<a href="">
+									<p>Mountaineering</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_666">
 							<div class="slide-info">
-								<p>Camel ride</p>
+								<a href="">
+									<p>Camel ride</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_777">
 							<div class="slide-info">
-								<p>Blimp</p>
+								<a href="">
+									<p>Blimp</p>
+								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_888">
 							<div class="slide-info">
-								<p>Basketball</p>
+								<a href="">
+									<p>Basketball</p>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -283,7 +241,7 @@
   
     <!-- Mutiple Slider Section Ends -->
 
-{{-- @include('footer') --}}
+@include('footer')
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
