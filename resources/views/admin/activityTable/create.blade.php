@@ -20,11 +20,13 @@
 
 
 @section('content')
-<div class="container">
-<form action="{{route('activity.store')}}" method="POST" enctype="multipart/form-data">
+<div class="container border shadow-lg p-3 mb-5 bg-white rounded">
+  <form action="{{route('activity.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
+  <h2 class="text-primary display-4 text-center  shadow-none p-3 mb-5 rounded">Create Activity</h2>
+
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">name</label>
+      <label for="exampleInputEmail1" class="form-label">Name</label>
       <input type="text" class="form-control" name="name">
       <div  class="form-text">We'll never share your email with anyone else.</div>
     </div>
@@ -39,8 +41,8 @@
       <div  class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">image</label>
-      <input type="file"  name="image">
+      <label for="exampleInputEmail1" class="form-label">Image</label>
+      <input type="file" class="form-control" name="image">
     </div>
 
     

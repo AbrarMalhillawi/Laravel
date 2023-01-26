@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('title')
     
-
+<a class="btn btn-primary " href="{{route('activity.create')}}">Add New Activity </a>
 @endsection
 
 @section('css')
@@ -9,7 +9,7 @@
 @endsection
 
 @section('title_page1')
-<a class="btn btn-dark" href="{{route('activity.create')}}">add new event </a>
+
 
 @endsection
 
@@ -20,23 +20,50 @@
 
 
 @section('content')
-@foreach ($events as $event)
-<div>
-    {{$event}}
-   <img src="{{asset('images/'.$event->image->url)}}" style="height: 100px; width:150px; display:block">
-   <a class="btn btn-dark" href="{{route('activity.edit',$event->id)}}">edit event </a>
 
-   <form action="{{Route('activity.destroy',$event->id)}}" method="POST" >
-    @method('DELETE')
-    @csrf
-    <button type="submit" class="btn btn-danger">Delete</button>
-  </form>
+<div class="container border shadow-lg p-3 mb-5 bg-white rounded ">
+  <table class="table table-striped thead-dark">
+    <thead class="table table-striped text-white thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th> 
+        <th scope="col">Edit</th>
+        <th scope="col">Delate</th>      
+      </tr>
+    </thead>
+    @foreach ($events as $event)
+    <tbody>
+      <tr>
+        <th>{{$event->id}}</th>
+        <td>{{$event->name}}</td>
+        <td>{{$event->description}}</td>
+        <td>{{$event->price}}</td>
+        <td>        
+          <img src="{{asset('images/'.$event->image->url)}}" style="height: 100px; width:150px; display:block">
+        </td>
+
+        <td>   
+          <a class="btn btn-primary" href="{{route('activity.edit',$event->id)}}">Edit Activity </a>
+        </td>
+        <td> 
+          <form action="{{Route('activity.destroy',$event->id)}}" method="POST" >
+          @method('DELETE')
+          @csrf
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </td>
+    </tbody>
+    @endforeach
+  </tr>
+  </table>
+  
+  </div>
 
 
 
-
-</div>
-@endforeach
 @endsection
 
 
