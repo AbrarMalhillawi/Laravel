@@ -35,6 +35,11 @@ Route::get('/about', function () {
 
 
 
+Route::get('/edit', function () {
+    return view('edit_profile');
+});
+
+
 // Route::get('/index', function () {
 //     return view('role.index');
 // });
