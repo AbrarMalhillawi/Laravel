@@ -18,33 +18,32 @@
 
 
 @section('content')
-<div class="container">
+<div class="container border shadow-lg p-3 mb-5 bg-white rounded">
     <form action="{{route('activity.update',$event->id)}}" method="POST" enctype="multipart/form-data">
       @csrf
       @method('PUT')
+      <h2 class="text-primary display-4 text-center">Edit Activity</h2>
+
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">name</label>
           <input type="text" class="form-control" name="name" value="{{$event->name}}">
-          <div  class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Description</label>
           <input type="text" class="form-control" name="description" value="{{$event->description}}">
-          <div  class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Price</label>
           <input type="number" class="form-control" name="price" value="{{$event->price}}">
-          <div  class="form-text">We'll never share your email with anyone else.</div>
         </div>
 
-        {{-- <div class="mb-3">
+        <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">image</label>
-          <input type="file"  name="image" >
-        </div> --}}
+          <input type="file" class="form-control" name="image" value="{{$event->image}}" >
+        </div>
     
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Edit Activity</button>
       </form>
     
     </div>

@@ -20,7 +20,49 @@
 
 
 @section('content')
-<div class="container">
+<div class="container border shadow-lg p-3 mb-5 bg-white rounded">
+    <form action="{{route('user.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <h2 class="text-primary display-4 text-center shadow-none p-3 mb-5 rounded">Create User</h2>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name">
+          {{-- <div  class="form-text">We'll never share your email with anyone else.</div> --}}
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email">
+          {{-- <div  class="form-text">We'll never share your email with anyone else.</div> --}}
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Mobile</label>
+            <input type="number" class="form-control" name="mobile">
+          {{-- <div  class="form-text">We'll never share your email with anyone else.</div> --}}
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input type="password" class="form-control"  name="password">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Role</label>
+            <input type="number" class="form-control" name="role">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label ">Image</label>
+            <input type="file" class="form-control" name="image">
+          </div>
+        <button type="submit" class="btn btn-primary">Create Now</button>
+    
+      </form>
+    
+    </div>
+
+
+
+{{-- <div class="container">
 <form action="{{route('user.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <h2>Create Now</h2>
@@ -58,7 +100,7 @@
 
    
     <button type="submit" class="submit">Create Now</button>
-</form>
+</form> --}}
  
 
 </div>
