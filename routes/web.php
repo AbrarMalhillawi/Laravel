@@ -30,6 +30,11 @@ Route::get('/contact', function () {
 });
 
 
+Route::get('/edit', function () {
+    return view('edit_profile');
+});
+
+
 Route::get('/about', function () {
     return view('about');
 });
