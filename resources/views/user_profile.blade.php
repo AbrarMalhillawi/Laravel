@@ -21,45 +21,42 @@
       <header class="head"></header>
       <div class="cols__container">
         <div class="left__col">
-          <div class="img__container">
-            <img src="images/moment.png" alt="Anna Smith" />
-            
-          </div>
-          <h2>Anna Smith</h2>
-          {{-- <p>UX/UI Designer</p>
-          <p>anna@example.com</p> --}}
 
-            <ul class="about">
-                <li>Phone :</li>
-                <li>Address :</li>
-                <li>Email :</li>
-                <li>Birthday :</li>
-                <li>Gender :</li>
-            </ul>
+            <div class="img__container">
+                <img src="images/moment.png" alt="Anna Smith" />
+            </div>
 
-            <ul class="about">
-                <li>+976 790574393</li>
-                <li>Amman</li>
-                <li>hack@gmail.com</li>
-                <li>Attraction</li>
-                <li>Mail</li>
-            </ul>
+            <h2>Anna Smith</h2>
+          
+            <div class="f-about">
+                <ul class="about">
+                    <li>Phone :</li>
+                    <li>Address :</li>
+                    <br>
+                    <br>
+                    <li>Email :</li>
+                    <li>Site :</li>
+                    <br>
+                    <br>
+                    <li>Birthday :</li>
+                    <li>Gender :</li>
+                </ul>
 
-          <div class="content">
-            {{-- <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam
-              erat volutpat. Morbi imperdiet, mauris ac auctor dictum, nisl
-              ligula egestas nulla.
-            </p> --}}
+                <ul class="about color">
+                    <li>+976 790574393</li>
+                    <li>Amman</li>
+                    <br>
+                    <br>
+                    <li>hack@gmail.com</li>
+                    <li>www.w3shoole.com</li>
+                    <br>
+                    <br>
+                    <li>Attraction</li>
+                    <li>Mail</li>
+                </ul>
+            </div>
 
-            {{-- <ul>
-              <a href=""><li><i class="fab fa-twitter"></i></li></a>
-              <a href=""><i class="fab fa-pinterest"></i></a>
-              <a href=""><i class="fab fa-facebook"></i></a>
-              <a href=""><i class="fab fa-dribbble"></i></a>
-              
-            </ul> --}}
-          </div>
+           
         </div>
         <div class="right__col">
           <nav>

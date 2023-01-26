@@ -36,7 +36,7 @@ Route::get('/about', function () {
 
 
 
-Route::get('/user', function () {
+Route::get('/user22', function () {
     return view('user_profile');    
 });
 
