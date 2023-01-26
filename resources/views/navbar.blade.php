@@ -1,3 +1,4 @@
+
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 	<link rel="stylesheet" href="css/navbar.css">
 
@@ -11,10 +12,11 @@
 			<div class="menu">
 				<ul>
 					<li><a href="/" class="active">Home</a></li>
-					<li><a href="/index">Events</a></li>
+					<li><a href="/event">Events</a></li>
 					<li><a href="/about">About US</a></li>
 					<li><a href="/contact">Contact US</a></li>
-					<li><a href="log">Login</a></li>
+					<li><a href="login">Login</a></li>
+					<li><a href="{{ route('signout') }}">LogOut</a></li>
 				</ul>
 			</div>
 		</div>
