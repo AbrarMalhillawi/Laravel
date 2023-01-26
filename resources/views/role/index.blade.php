@@ -186,7 +186,7 @@
 	{{-- ------------------------------------------------------------------------------- --}}
 	<section id="water-slider111">
         <div class="container">
-			<h2>Interesting Events</h2>
+			<h2>Advanture Events</h2>
             <p></p>
 
 

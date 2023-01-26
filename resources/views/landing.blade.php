@@ -42,7 +42,7 @@
                 <h1> ALOHA</h1>
                 <p>ِِِِِِِadventurer <br> join us on the best trips . <br>
                      We find the spirit of adventure, knowledge and learning the best methods through experience</p>
-                <a href="#" class="a">Book trip</a>
+                {{-- <a href="#" class="a">Book trip</a> --}}
             </div>
             <div class="video">
                 <video id="video" autoplay loop muted>
@@ -52,17 +52,66 @@
         </div>
     </header>
 
+    <section>
+        <div class="slider">
+            <h2 class="text-center font-weight-bold">Our Partners</h2>
+            <section class="customer-logos slider">
+                <div class="slide"><img src="images/m4.png" alt="logo"></div>
+                <div class="slide"><img src="images/m5.png" alt="logo"></div>
+                <div class="slide"><img src="images/m2.png" alt="logo"></div>
+                <div class="slide"><img src="images/m.jpg" alt="logo"></div>
+                <div class="slide"><img src="images/m7.jpg" alt="logo"></div>
+                <div class="slide"><img src="images/m6.png" alt="logo"></div>
+                <div class="slide"><img src="images/m8.jpg" alt="logo"></div>
+            </section>
+        </div>
+    
+        
+    
+        <script>
+        
+            $(document).ready(function(){
+                $('.customer-logos').slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover:false,
+                    responsive: [{
+                        breakpoint: 768,
+                        setting: {
+                            slidesToShow:4
+                        }
+                    }, {
+                        breakpoint: 520,
+                        setting: {
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+            });
+    
+        </script>
+    
+      </section>
+    
+    
     <section id="welcome-text">
         <div class="container">
-            <h2>Some of our trips</h2>
-            <p>Excerpts from the best trips we have taken by the best groups that have joined us</p>
+            <pre>
+
+            </pre>
         </div>
     </section>
   
  
-    <section id="water-slider">
+    <section id="water-slider2">
         <div class="container">
-            <h3>Start Planning Your Dream Holiday</h3>
+            <h3 style="font-size:50px">Start Planning Your Dream Holiday</h3>
+            <br>
+            <br>
             <div class="owl-carousel owl-theme">
 
                 <div class="item">
@@ -143,52 +192,6 @@
         </div>
     </section>
    
-  <section>
-    <div class="slider">
-        <h2 class="text-center font-weight-bold">Our Partners</h2>
-        <section class="customer-logos slider">
-            <div class="slide"><img src="images/m4.png" alt="logo"></div>
-            <div class="slide"><img src="images/m5.png" alt="logo"></div>
-            <div class="slide"><img src="images/m2.png" alt="logo"></div>
-            <div class="slide"><img src="images/m.jpg" alt="logo"></div>
-            <div class="slide"><img src="images/m7.jpg" alt="logo"></div>
-            <div class="slide"><img src="images/m6.png" alt="logo"></div>
-            <div class="slide"><img src="images/m8.jpg" alt="logo"></div>
-        </section>
-    </div>
-
-    <p class="copy text-center font-weight-bold">All Rights Reserved &copy; Make Dev</p>
-    
-
-    <script>
-    
-        $(document).ready(function(){
-            $('.customer-logos').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                arrows: false,
-                dots: false,
-                pauseOnHover:false,
-                responsive: [{
-                    breakpoint: 768,
-                    setting: {
-                        slidesToShow:4
-                    }
-                }, {
-                    breakpoint: 520,
-                    setting: {
-                        slidesToShow: 3
-                    }
-                }]
-            });
-        });
-
-    </script>
-
-  </section>
-
 
     
     @include('footer')
