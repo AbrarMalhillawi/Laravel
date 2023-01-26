@@ -10,11 +10,11 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="/" class="active">Home</a></li>
-					<li><a href="/index">Events</a></li>
-					<li><a href="/about">About US</a></li>
-					<li><a href="/contact">Contact US</a></li>
-					<li><a href="log">Login</a></li>
+					<li><a href="/" class="Home">Home</a></li>
+					<li><a href="/index" class="Events">Events</a></li>
+					<li><a href="/about" class="About">About US</a></li>
+					<li><a href="/contact" class="Contact">Contact US</a></li>
+					<li><a href="log" class="Login">Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -25,11 +25,11 @@
 
 </div>
 
-<script>
+{{-- <script>
 	var hamburger = document.querySelector(".hamburger");
 	var menu = document.querySelector(".menu");
 
 	hamburger.addEventListener("click", function(){
 		menu.classList.toggle("active");
 	})
-</script>
+</script> --}}
