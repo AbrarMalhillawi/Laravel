@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+
+
+
+/*   color variables */
+/*   border radius */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.all-edit-big{
+  /* border: 1px solid #E53854; */
+  background-color: rgb(0, 0, 0);
+ 
+}
+
+
+.edit-big1{
+  padding: 10% 0 0 0;
+  width: -20vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.edit-big2{
+
+  /* padding: 0 10% ; */
+
+  width: -120vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.edit-big2 input{
+  /* padding: 0 17%; */
+
+}
+
+/* .edit-big2 div{
+  padding: 0 12%;
+  margin-left: 1%;
+
+} */
+
+
+.all-edit{
+  padding: 10%;
+  width: 120vh;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+
+.all-Forme-Edit{
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+
+
+#admin_controls{
+  position: relative;
+	float: left;
+	width: 22%;
+	margin: 5% 0;
+	/* margin-left: 10%; */
+}
+
+
+
+/* body {
+  font-family: "Convergence", sans-serif;
+  height: 100vh;
+  width: 200vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #ffffff;
+} */
+
+
+
+
+
+
+#admin_controls button {
+  background-color: black;
+  color: white;
+  height: 42px;
+  border-radius: 4px;
+  outline: none;
+  border: 0px solid white;
+  width: 43%;
+  margin: 0px 23%;
+  letter-spacing: 5px;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px #E53854, -1px -1px 2px 2px #E53854;;
+}
+
+
+
+#admin_controls button:hover{
+	background-color: white;
+	color: #176655;
+	box-shadow: 1px 1px 2px 2px rgba(17,66,55,0.4),
+             -1px -1px 2px 2px rgba(17,66,55,0.4);
+}
+
+
+
+
+
+/* input[type="text"],input[type="email"],input[type="password"]{
+	background-color: transparent;
+	box-shadow: 1px 1px 2px 2px rgba(17,66,55,0.4),
+             -1px -1px 2px 2px rgba(17,66,55,0.4);
+	width: 85%;
+	line-height: 2.0;
+	border: 0px solid white;
+	color: #176655;
+	font-size: 15px;
+} */
+
+
+
+
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.form__input {
+  padding: 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #E53854;;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+.form__input:hover {
+  border-color: #E53854;;
+}
+.form__input:focus {
+  border-color: #E53854;;
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: #E53854;;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: #000000
+}
+
+/* 
+1. When the input is in the focus state
+reduce the size of the label and move upwards 
+
+2. Keep label state when content is in input field 
+*/
+.form__input:not(:-moz-placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+.form__input:not(:-ms-input-placeholder).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}/*# sourceMappingURL=edit_profile.css.map */
