@@ -36,9 +36,20 @@ Route::get('/about', function () {
 
 
 
+<<<<<<< HEAD
+Route::get('/edit', function () {
+    return view('edit_profile');
+});
+
+
+// Route::get('/index', function () {
+//     return view('role.index');
+// });
+=======
 Route::get('/user', function () {
     return view('user_profile');    
 });
+>>>>>>> acad177300204955c6c5d413f23440101227d28d
 
 
 // Route::get('/show', function () {
