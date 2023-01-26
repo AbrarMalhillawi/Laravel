@@ -122,7 +122,7 @@
 					<div class="slides">
 						<div class="slide_1 slide_22">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Swimming races</p>
 
 								</a>
@@ -130,7 +130,7 @@
 						</div>
 						<div class="slide_1 slide_33">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Fly fishing</p>
 
 								</a>
@@ -138,7 +138,7 @@
 						</div>
 						<div class="slide_1 slide_44">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Net fishing</p>
 
 								</a>
@@ -146,7 +146,7 @@
 						</div>
 						<div class="slide_1 slide_55">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Fishing on a boat</p>
 
 								</a>
@@ -154,7 +154,7 @@
 						</div>
 						<div class="slide_1 slide_66">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Diving</p>
 
 								</a>
@@ -162,7 +162,7 @@
 						</div>
 						<div class="slide_1 slide_77">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Party boat</p>
 
 								</a>
@@ -170,7 +170,7 @@
 						</div>
 						<div class="slide_1 slide_88">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>small boat trip</p>
 
 								</a>
@@ -195,49 +195,49 @@
 					<div class="slides">
 						<div class="slide_1 slide_222">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Desert trip</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_333">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Horse riding</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_444">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Long walk</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_555">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Mountaineering</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_666">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Camel ride</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_777">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Blimp</p>
 								</a>
 							</div>
 						</div>
 						<div class="slide_1 slide_888">
 							<div class="slide-info">
-								<a href="">
+								<a href="/show">
 									<p>Basketball</p>
 								</a>
 							</div>

@@ -618,8 +618,17 @@ section#blog{
     .nav ul{
         margin-top: 100px;
     }
-    
+    .item .owl-img-par img {
+        width: 200px;
+        height: 200px;
+    }
+    .text-center {
+        font-size: 20px;
+    }
+    .container h3 {
+        font-size: 20px !important;
 
+    }
 
     .header-info-par h1{
         font-size: 20px;
@@ -628,7 +637,7 @@ section#blog{
         padding: 0 40px;
     }
     .header-info-par p{
-        font-size: 100px;
+        /* font-size: 100px; */
         line-height: 26px;
     }
     section#welcome-text h2{
@@ -769,3 +778,4 @@ h2{
 .copy{
     padding-top: 250px;
 }
+/* ====================== end slider ===================================== */

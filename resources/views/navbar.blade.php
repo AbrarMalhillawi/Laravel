@@ -1,6 +1,6 @@
 
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="{{URL::asset('css/navbar.css')}}">
 
 	
 <div class="wrapper">
@@ -28,11 +28,11 @@
 
 </div>
 
-{{-- <script>
+ <script>
 	var hamburger = document.querySelector(".hamburger");
 	var menu = document.querySelector(".menu");
 
 	hamburger.addEventListener("click", function(){
 		menu.classList.toggle("active");
 	})
-</script> --}}
+</script> 

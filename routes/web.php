@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\admin\ActivityController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::get('/about', function () {
 
 
 
+<<<<<<< HEAD
 Route::get('/edit', function () {
     return view('edit_profile');
 });
@@ -43,6 +45,11 @@ Route::get('/edit', function () {
 // Route::get('/index', function () {
 //     return view('role.index');
 // });
+=======
+Route::get('/user', function () {
+    return view('user_profile');    
+});
+>>>>>>> acad177300204955c6c5d413f23440101227d28d
 
 
 // Route::get('/show', function () {
@@ -58,6 +65,7 @@ Route::get('/edit', function () {
 
 
 Route::resource('activity',ActivityController ::class);
+Route::resource('user',UserController ::class);
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);

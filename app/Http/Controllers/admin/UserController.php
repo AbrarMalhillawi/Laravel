@@ -9,7 +9,7 @@ use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class ActivityController extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,8 +35,8 @@ class ActivityController extends Controller
 
     public function index()
     {
-        $events=Event::all();
-        return view('admin.activityTable.index',compact('events'));
+        $users=User::all();
+        return view('admin.user.index',compact('users'));
         
     }
 
@@ -47,7 +47,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.activityTable.create');
+        return view('admin.user.create');
            
     }
 
@@ -59,28 +59,35 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+    //   $array= [$request->name,$request->email,$request->role,$request->email_verified_at,$request->password,$request->image];
+    //   dd($array);  
+    // dd($request->mobile);
+
+      $request->validate([
             'name' => 'required',
-            'description' => 'required',
-            'price' => 'required',
+            'email' => 'required',
+            'role' => 'required',
+            // 'email_verified_at' => 'required',
+            'password' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg'
         ]);
 
 
-        $newImageName = time() . '_' . $request->name . '.' . 
+        $newImageName = time() . '_' . '.' . 
         $request->image->extension();
         $request->image->move(public_path('images'), $newImageName);
 
-        $activity = Event::create([
+        $user = User::create([
             'name' => strip_tags($request->input('name')),
-            'description' => strip_tags($request->input('description')),
-            'price' => strip_tags($request->input('price')),
+            'email' => strip_tags($request->input('email')),
+            'email_verified_at' =>null,
+            'role' => strip_tags($request->input('role')),
+            'password' => strip_tags($request->input('password')),
         ]);
-
-        $activity->image()->create([
+        $user->image()->create([
             'url' =>  $newImageName
         ]);
-        return redirect()->route('activity.index');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -103,8 +110,8 @@ class ActivityController extends Controller
     public function edit($id)
     {
         
-        return view('admin.activityTable.edit', [
-            'event' => Event::findOrFail($id)
+        return view('admin.user.edit', [
+            'user' => User::findOrFail($id)
         ]);
     }
 
@@ -117,13 +124,15 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $event=Event::findorFail($id);
-        $event->name=$request->name;
-        $event->description=$request->description;
-        $event->price=$request->price;
+        $user=User::findorFail($id);
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->email_verified_at=null;
+        $user->role=$request->role;
+        $user->password=$request->password;
        
-        $event->save();
-         return redirect()->route('activity.index');
+        $user->save();
+         return redirect()->route('user.index');
     }
 
     /**
@@ -134,10 +143,10 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        $event=Event::findorfail($id);
-    //   $event->users()->detach();
-      $event->delete();
+        $user=User::findorfail($id);
+    //   $user->users()->detach();
+      $user->delete();
  
-      return redirect()->route('activity.index');
+      return redirect()->route('user.index');
     }
 }
