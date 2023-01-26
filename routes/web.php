@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\admin\ActivityController;
+use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+// Route::get('/', function () {
+//     return view('landing');
+// });
 
 
-Route::get('/log', function () {
-    return view('login-register');
-});
+// Route::get('/log', function () {
+//     return view('login-register');
+// });
 
 
 Route::get('/contact', function () {
@@ -34,16 +35,30 @@ Route::get('/about', function () {
 
 
 
-Route::get('/index', function () {
-    return view('role.index');
-});
+// Route::get('/index', function () {
+//     return view('role.index');
+// });
 
 
-Route::get('/show', function () {
-    return view('role.show');
-});
+// Route::get('/show', function () {
+//     return view('role.show');
+// });
 
 
-Route::get('/nav', function () {
-    return view('navbar');
-});
+// Route::get('/nav', function () {
+//     return view('navbar');
+// });
+
+
+
+
+Route::resource('activity',ActivityController ::class);
+
+Route::get('/',[CustomAuthController::class,'home']);
+Route::get('login',[CustomAuthController::class,'login']);
+Route::get('event',[CustomAuthController::class,'event']);
+Route::get('show',[CustomAuthController::class,'show']);
+Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
+Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
