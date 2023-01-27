@@ -15,10 +15,9 @@
     <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" > --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
     <style>
         .Login,.Contact,.About,.Events{
             background-color: none;

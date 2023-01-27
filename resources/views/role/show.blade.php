@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="css/all_min.css">
     <link rel="stylesheet" href="css/show.css">
     <title>Product Details</title>
+
+    {{-- ///////// Bootstrap //////////// --}}
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> --}}
+
+    {{-- ///////// flatpickr.js //////////// --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <body>
     @include('navbar')
@@ -29,6 +36,8 @@
 
             <div class="basic-info">
                 <h1>horseback riding</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
+
                 <div class="rate">
                     <i class="filled fas fa-star"></i>
                     <i class="filled fas fa-star"></i>
@@ -36,6 +45,7 @@
                     <i class="filled fas fa-star"></i>
                     <i class="filled fas fa-star"></i>
                 </div>
+
                 <span>$250</span>
                 <div class="options">
                     <a href="#">Buy It Now</a>
@@ -57,189 +67,43 @@
             </div>
 
             <div class="description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
-               
+            
+                <form class="calendar" action="">
+                    <input class="form-control" type="datetime-local" placeholder="Select DateTime" name="datetime">
+                    <button type="submit">submit</button>
+                </form>
+                
             </div>
 
-            <div id="calendar-wrap">
-      
-                <div id="calendar">
-                    <ul class="weekdays">
-                        <li>Sunday</li>
-                        <li>Monday</li>
-                        <li>Tuesday</li>
-                        <li>Wednesday</li>
-                        <li>Thursday</li>
-                        <li>Friday</li>
-                        <li>Saturday</li>
-                    </ul>
+            
+            
+
         
-                    <!-- Days from previous month -->
-        
-                    <ul class="days">
-                        <li class="day other-month">
-                            <div class="date">27</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">28</div>
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">29</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">30</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">31</div>    					
-                        </li>
-        
-                        <!-- Days in current month -->
-        
-                        <li class="day">
-                            <div class="date">1</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">2</div>
-                        </li>
-                    </ul>
-        
-                        <!-- Row #2 -->
-        
-                    <ul class="days">
-                        <li class="day">
-                            <div class="date">3</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">4</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">5</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">6</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">7</div>
-                                               
-                        </li>
-                        <li class="day">
-                            <div class="date">8</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">9</div>    					
-                        </li>
-                    </ul>
-        
-                        <!-- Row #3 -->
-        
-                    <ul class="days">
-                        <li class="day">
-                            <div class="date">10</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">11</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">12</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">13</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">14</div>			 
-                        </li>
-                        <li class="day">
-                            <div class="date">15</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">16</div>    					
-                        </li>
-                    </ul>
-        
-                        <!-- Row #4 -->
-        
-                    <ul class="days">
-                        <li class="day">
-                            <div class="date">17</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">18</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">19</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">20</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">21</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">22</div>
-                        </li>
-                        <li class="day">
-                            <div class="date">23</div>    					
-                        </li>
-                    </ul>
-        
-                       <!-- Row #5 -->
-        
-                    <ul class="days">
-                        <li class="day">
-                            <div class="date">24</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">25</div>
-                        </li>
-                        <li class="day">
-                            <div class="date">26</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">27</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">28</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">29</div>    					
-                        </li>
-                        <li class="day">
-                            <div class="date">30</div>    					
-                        </li>
-                    </ul>
-        
-                    <!-- Row #6 -->
-        
-                    <ul class="days">
-                        <li class="day">
-                            <div class="date">31</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">1</div>  					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">2</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">3</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">4</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">5</div>    					
-                        </li>
-                        <li class="day other-month">
-                            <div class="date">6</div>    					
-                        </li>
-                    </ul>
-        
-                </div>
-            </div>
+            <script src="JS/show.js"></script>
 
         </div>
     </div>
     @include('footer')
+
+   
+
+    {{-- ///////// Bootstrap //////////// --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    {{-- ///////// flatpickr.js //////////// --}}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <script>
+        config = {
+            enableTime: true,
+            minTime: "16:00",
+            maxTime: "22:00",
+            inline: true
+        }
+         
+        flatpickr("input[type=datetime-local]", config);
+    </script>
 
 </body>
 </html>
