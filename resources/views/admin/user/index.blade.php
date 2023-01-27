@@ -20,6 +20,10 @@
 
 
 @section('content')
+
+<?php
+//  echo session('key') . "<br>"; 
+?>
 <div class="container border shadow-lg p-3 mb-5 bg-white rounded ">
 <table class="table table-striped thead-dark">
   <thead class="table table-striped text-white thead-dark">
