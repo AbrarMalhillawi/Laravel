@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,21 +59,24 @@ Route::get('/userShow', function () {
 Route::get('/zzz', function () {
     // $value = session('key');
         // echo session('key') . "<br>";
-        echo session('user') . "<br>";
+        // echo session('user') . "<br>";
     // return session()->flush();
-        $users = User::all();
-        foreach($users as $user){
-            echo ($user->email  == "test2@gamil.com" && $user->password  == "Zohde123"). "<br>";
+        // $users = User::all();
+        // foreach($users as $user){
+            // echo ($user->email  == "test2@gamil.com" && $user->password  == "Zohde123"). "<br>";
             // echo ($user->password  == "Zohde123"). "<br>";
-        }
-    return "hello";
+        // }
+    // return "hello";
+    $sall = Session::get('user')->role;
+    dd($sall);
+
 });
 
 
 
 
-Route::resource('activity',ActivityController ::class);
-Route::resource('user',UserController ::class);
+Route::resource('activity',ActivityController ::class)->middleware('board');
+Route::resource('user',UserController ::class)->middleware('board');
 
 
 Route::get('/',[CustomAuthController::class,'home']);
