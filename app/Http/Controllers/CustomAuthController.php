@@ -17,14 +17,11 @@ class CustomAuthController extends Controller
     {   
         return view('login-register');
     }
-    public function event()
-    {
-        return view('role.index');
-    }
-    public function show()
-    {
-        return view('role.show');
-    }
+    
+    // public function show()
+    // {
+    //     return view('role.show');
+    // }
     public function signupsave(Request $request)
     {
         // return "hello";

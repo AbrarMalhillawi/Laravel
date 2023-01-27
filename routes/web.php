@@ -2,6 +2,7 @@
 use App\Http\Controllers\admin\ActivityController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
@@ -81,11 +82,14 @@ Route::resource('user',UserController ::class)->middleware('board');
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
-Route::get('event',[CustomAuthController::class,'event']);
-Route::get('show',[CustomAuthController::class,'show']);
+Route::get('event',[EventController::class,'index']);
+// Route::get('show',[CustomAuthController::class,'show']);
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
 Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+
+Route::get('event/{id}',[EventController::class,'show']);
 
 // Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 

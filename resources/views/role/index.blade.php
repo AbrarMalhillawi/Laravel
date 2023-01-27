@@ -37,6 +37,7 @@
         </div>
     </section>
 
+
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
         <div class="container">
