@@ -11,14 +11,14 @@
 			</div>
 			<div class="menu">
 				<ul>
-					<li><a href="/" class="active">Home</a></li>
-					<li><a href="/event">Events</a></li>
-					<li><a href="/about">About US</a></li>
-					<li><a href="/contact">Contact US</a></li>
+					<li><a href="/" class="Home">Home</a></li>
+					<li><a href="/event" class="Events">Events</a></li>
+					<li><a href="/about" class="About">About US</a></li>
+					<li><a href="/contact" class="Contact">Contact US</a></li>
 					@if (!session('user'))
-					<li><a href="login">Login</a></li>						
+					<li><a href="login" class="Login">Login</a></li>						
 					@else
-					<li><a href="{{ route('signout') }}">LogOut</a></li>
+					<li><a href="{{ route('signout') }}">Logout</a></li>
 					@endif
 
 				</ul>

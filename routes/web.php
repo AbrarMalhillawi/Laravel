@@ -23,15 +23,14 @@ use Illuminate\Support\Facades\Session;
 // });
 
 
-// Route::get('/log', function () {
-//     return view('login-register');
-// });
+Route::get('/profile', function () {
+    return view('user_profile');
+});
 
 
 Route::get('/contact', function () {
     return view('contact');
 });
-
 
 Route::get('/edit', function () {
     return view('edit_profile');

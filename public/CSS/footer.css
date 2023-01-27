@@ -27,6 +27,15 @@ ul{
    width: 25%;
    padding: 0 15px;
 }
+.footer-col i {
+	color: white;
+	margin-right: 10px;
+}
+.footer-col  img {
+	width: 50px;
+	height: 60px;
+	margin-right: 10px;
+}
 .footer-col h4{
 	font-size: 18px;
 	color: #ffffff;
@@ -75,8 +84,11 @@ ul{
 	transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
-	color: #24262b;
+	color: #24262b ;
 	background-color: #ffffff;
+}
+.footer-col .social-links a:hover i{
+	color: #24262b ;
 }
 
 /*responsive*/
