@@ -3,6 +3,7 @@ use App\Http\Controllers\admin\ActivityController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,18 @@ Route::get('/userShow', function () {
 // Route::get('/nav', function () {
 //     return view('navbar');
 // });
+Route::get('/zzz', function () {
+    // $value = session('key');
+        // echo session('key') . "<br>";
+        echo session('user') . "<br>";
+    // return session()->flush();
+        $users = User::all();
+        foreach($users as $user){
+            echo ($user->email  == "test2@gamil.com" && $user->password  == "Zohde123"). "<br>";
+            // echo ($user->password  == "Zohde123"). "<br>";
+        }
+    return "hello";
+});
 
 
 
@@ -61,11 +74,17 @@ Route::get('/userShow', function () {
 Route::resource('activity',ActivityController ::class);
 Route::resource('user',UserController ::class);
 
+
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
 Route::get('event',[CustomAuthController::class,'event']);
 Route::get('show',[CustomAuthController::class,'show']);
-Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
+Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
-Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+
+// Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+
+// Route::get('/',[CustomAuthController::class,'home']);
+// Route::get('login',[CustomAuthController::class,'login']);
+// Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');

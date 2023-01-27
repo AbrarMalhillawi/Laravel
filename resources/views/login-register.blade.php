@@ -16,9 +16,20 @@
 @include('navbar')
     <div class="body">
         <div class="cont">
+            
             <form class="form sign-in" action="{{route('postlogin')}}" method="POST" >
                 @csrf
             <h2>Login</h2>
+            @if (count($errors) > 0)
+            <?php redirect('login'); ?>
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             <label>
                 <span>Email</span>
                 <input type="email" name="email">
@@ -55,12 +66,23 @@
                 <span class="m-in">Login</span>
                 </div>
             </div>
+            
             <form class="form sign-up"  action="{{route('postsignup')}}" method="POST">
                 @csrf
                 <h2>Register</h2>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <label class="name">
                     <span>First Name</span>
                     <input type="text" id="name" name="name">
+                    {{-- {{$errors->name}} --}}
                 </label>
 
                 <label class="name">
@@ -71,11 +93,13 @@
                 <label class="e-p">
                     <span>Email</span>
                     <input type="email" name="email" id="email">
+                    {{-- {{$errors->email}} --}}
                 </label>
                 <br>
                 <label class="e-p">
                     <span>Password</span>
                     <input type="password" name="password" id="password">
+                    {{-- {{$errors->password}} --}}
                 </label>
                 <br>
                 <label class="e-p">
