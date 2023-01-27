@@ -27,7 +27,7 @@ class CustomAuthController extends Controller
     }
     public function signupsave(Request $request)
     {
-      
+        // return "hello";
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
@@ -35,7 +35,7 @@ class CustomAuthController extends Controller
         ]);
         
         $data = $request->all();
-        dd();
+        // dd();
         $check = $this->create($data);
 
         return redirect("/");
