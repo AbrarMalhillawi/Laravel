@@ -42,6 +42,12 @@
                 <p>ِِِِِِِadventurer <br> join us on the best trips . <br>
                      We find the spirit of adventure, knowledge and learning the best methods through experience</p>
                 {{-- <a href="#" class="a">Book trip</a> --}}
+
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="search anything " name="q">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                
             </div>
             <div class="video">
                 <video id="video" autoplay loop muted>
@@ -115,74 +121,21 @@
 
                 <div class="item">
                     <div class="owl-img-par">
-                        <img src="images/fiji-surprise/5.jpg" alt="" class="img-responsive" />
+                        <a href="/event"><img src="images/sea/Fly fishing.jpeg" alt="" class="img-responsive" /></a>
                         <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
+                            <h3>Sea Events</h3>
                         </div>
                     </div>
                     <div class="owl-img-par">
-                        <img src="images/fiji-surprise/6.jpg" alt="" class="img-responsive" />
+                        <a href="/event "><img src="images/WhatsApp Image 2023-01-24 at 3.16.07 PM (1).jpeg" alt="" class="img-responsive" /></a>
                         <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
+                            <h3>Advanture Events</h3>
                         </div>
                     </div>
                     <div class="owl-img-par">
-                        <img src="images/fiji-surprise/26.jpg" alt="" class="img-responsive" />
+                        <a href="/event"><img src="images/shooting/sniper gun.jpeg" alt="" class="img-responsive" /></a>
                         <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
-                        </div>
-                    </div>
-                </div>
-                    <br>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="images/land/Camel ride.jpg" alt="" class="img-responsive" />
-                        
-                        <div class="owl-img-info">
-                            <h3>Rome</h3>
-                            <p>ITALY</p>
-                        </div>
-                    </div>
-                    <div class="owl-img-par">
-                        <img src="images/land/desert ride.jpg" alt="" class="img-responsive" />
-                        
-                        <div class="owl-img-info">
-                            <h3>Rome</h3>
-                            <p>ITALY</p>
-                        </div>
-                    </div>
-                    <div class="owl-img-par">
-                        <img src="images/land/long walk.jpeg" alt="" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
-                        </div>
-                    </div>
-                </div>
-                    <br>
-                <div class="item">
-                    <div class="owl-img-par">
-                        <img src="images/sea/Fly fishing.jpeg" alt="" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>Cairo</h3>
-                            <p>EGYPT</p>
-                        </div>
-                    </div>
-                    <div class="owl-img-par">
-                        <img src="images/sea/Net fishing.jpg" alt="" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
-                        </div>
-                    </div>
-                    <div class="owl-img-par">
-                        <img src="images/sea/Party boat.jpeg" alt="" class="img-responsive" />
-                        <div class="owl-img-info">
-                            <h3>Bangkok</h3>
-                            <p>THAILAND</p>
+                            <h3>Shooting Events</h3>
                         </div>
                     </div>
                 </div>
@@ -194,7 +147,7 @@
 
     
     @include('footer')
-    
+    <script src="https://kit.fontawesome.com/b2bc864126.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/extrenaljq.js"></script>

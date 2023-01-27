@@ -40,7 +40,7 @@
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
         <div class="container">
-			<h2>ٍShooting Events</h2>
+			<h2 id="Shooting">Shooting Events</h2>
             <p></p>
 
 
@@ -113,7 +113,7 @@
 	{{-- ------------------------------------------------------------------------------- --}}
 	<section id="water-slider11">
         <div class="container">
-			<h2>Sea Events</h2>
+			<h2 id="Sea">Sea Events</h2>
             <p></p>
 
 
@@ -186,7 +186,7 @@
 	{{-- ------------------------------------------------------------------------------- --}}
 	<section id="water-slider111">
         <div class="container">
-			<h2>Advanture Events</h2>
+			<h2 id="Advanture">Advanture Events</h2>
             <p></p>
 
 
