@@ -3,6 +3,8 @@
 	<link rel="stylesheet" href="{{URL::asset('css/navbar.css')}}">
 
 	
+
+	
 <div class="wrapper">
 	<div class="navbar">
 		<div class="inner_navbar">
