@@ -113,7 +113,7 @@
             enableTime: true,
             minTime: "16:00",
             maxTime: "22:00",
-            inline: true
+            // inline: true
         }
          
         flatpickr("input[type=datetime-local]", config);

@@ -7,7 +7,7 @@
 	<div class="navbar">
 		<div class="inner_navbar">
 			<div class="logo">
-				<a href="#">The <span>Moment</span></a>
+				<a href="/">The <span>Moment</span></a>
 			</div>
 			<div class="menu">
 				<ul>
