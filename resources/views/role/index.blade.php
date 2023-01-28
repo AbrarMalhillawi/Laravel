@@ -37,11 +37,25 @@
         </div>
     </section>
 
+
+	
+<section>
+
+	@foreach ($events as $event)
+		<a href="{{route('event.show',$event->id)}}">
+   <div>
+	{{$event->name}}
+   </div>
+		</a>
+	@endforeach
+</section>
+
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
         <div class="container">
 			<h2 id="Shooting">Shooting Events</h2>
             <p></p>
+
 
 
 			<section id="slides-par">

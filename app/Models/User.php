@@ -44,8 +44,13 @@ class User extends Authenticatable
     ];
 
 
+    public function events(){
+        return $this->belongsToMany(Event::class)->withTimestamps();
+    }
+
     public function image()
     {
+
         return $this->morphOne(Image::class, 'imageable');
     }
 

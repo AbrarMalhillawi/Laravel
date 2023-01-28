@@ -1,7 +1,9 @@
 <?php
 use App\Http\Controllers\admin\ActivityController;
+use App\Http\Controllers\admin\BookingController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
@@ -58,7 +60,7 @@ Route::get('/userShow', function () {
 Route::get('/zzz', function () {
     // $value = session('key');
         // echo session('key') . "<br>";
-        // echo session('user') . "<br>";
+        echo session('user')->id . "<br>";
     // return session()->flush();
         // $users = User::all();
         // foreach($users as $user){
@@ -66,8 +68,8 @@ Route::get('/zzz', function () {
             // echo ($user->password  == "Zohde123"). "<br>";
         // }
     // return "hello";
-    $sall = Session::get('user')->role;
-    dd($sall);
+    // $sall = Session::get('user')->role;
+    // dd($sall);
 
 });
 
@@ -75,16 +77,19 @@ Route::get('/zzz', function () {
 
 
 Route::resource('activity',ActivityController ::class)->middleware('board');
+Route::resource('booking',BookingController ::class)->middleware('board');
 Route::resource('user',UserController ::class)->middleware('board');
+Route::resource('event',EventController ::class);
 
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
-Route::get('event',[CustomAuthController::class,'event']);
-Route::get('show',[CustomAuthController::class,'show']);
+// Route::get('show',[CustomAuthController::class,'show']);
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
 Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+
 
 // Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 

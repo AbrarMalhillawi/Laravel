@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="{{URL::asset('css/footer.css')}}">
 
 
   {{-- <link rel="stylesheet" href="css/style.css"> --}}
