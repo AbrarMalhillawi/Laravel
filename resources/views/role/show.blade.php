@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/all_min.css">
-    <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet"  href="{{URL::asset('css/show.css')}}">
     <title>Product Details</title>
 
     {{-- ///////// Bootstrap //////////// --}}
@@ -16,12 +16,12 @@
 </head>
 <body>
     @include('navbar')
-
+  
     <div class="show">
         <div class="box">
             <div class="images">
                 <div class="img-holder active">
-                    <img src="images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg">
+                    <img src="{{URL::asset('images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg')}}">
                 </div>
                 <div class="img-holder">
                     <img src="images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="basic-info">
-                <h1>horseback riding</h1>
+                <h1>{{$event->name}}</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
 
                 <div class="rate">
@@ -68,10 +68,24 @@
 
             <div class="description">
             
-                <form class="calendar" action="">
+                <form class="calendar" action="{{route('event.store')}}" method="POST">
+                    @csrf
                     <input class="form-control" type="datetime-local" placeholder="Select DateTime" name="datetime">
+                    <input  type="hidden"  name="event" value="{{$event->id}}">
+                    @if(session('user'))
+                    <input  type="hidden"  name="user" value="{{session('user')->id}}">
+                    @endif
                     <button type="submit">submit</button>
                 </form>
+
+                {{-- @if ($event->users())
+            <div> --}}
+                {{-- @foreach ($event->users() as $user)
+                    {{$user->id}}
+                @endforeach --}}
+                {{-- {{$event->users()->first()->name}} --}}
+                {{-- </div>     
+                @endif --}}
                 
             </div>
 

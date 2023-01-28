@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+
+namespace App\Http\Controllers\admin;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\User;
-
-class EventController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,14 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $events=Event::all();
-        return view('role.index',compact('events'));
+    { $array=[];
+        foreach(User::all() as $user){
+            foreach($user->events as $event){
+               $array[]=$event;
+            }
+        }
+        // $books=User::findOrFail('1');
+        return view('admin.booking.index',compact('array'));
     }
 
     /**
@@ -37,13 +43,7 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        $user=User::findOrFail($request->user);
-        $event=Event::findOrFail($request->event);
-        // dd($event);
-        $user->events()->syncWithoutDetaching($event);
-    
-        return redirect("event/$event->id");
+        //
     }
 
     /**
@@ -54,14 +54,9 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        return view('role.show', [
-            'event' => Event::findOrFail($id)
-        ]);
+        //
     }
 
-    // [
-    //     'event' => Event::findOrFail($id)
-    // ]);
     /**
      * Show the form for editing the specified resource.
      *

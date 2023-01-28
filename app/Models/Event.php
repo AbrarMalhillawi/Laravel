@@ -9,6 +9,12 @@ class Event extends Model
 {
     use HasFactory;
     protected $fillable = ['name','description','price'];
+
+    public function users(){
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
+
     public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
