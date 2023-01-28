@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Session;
 // });
 
 
+
 Route::get('/profile', function () {
     return view('user_profile');
 });
