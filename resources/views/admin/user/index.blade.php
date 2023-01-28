@@ -15,7 +15,6 @@
 
 @section('title_page2')
 
-
 @endsection
 
 

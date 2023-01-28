@@ -44,6 +44,9 @@ Route::get('/about', function () {
 });
 
 
+Route::get('/book', function () {
+    return view('admin.booking.index');
+});
 
 Route::get('/userShow', function () {
     return view('user_profile');    

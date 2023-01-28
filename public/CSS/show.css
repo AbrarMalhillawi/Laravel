@@ -34,9 +34,10 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
-    padding: 45px;
+    padding: 25px;
     margin: 15px 0;
     width: 95%;
+    height: 35em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
@@ -50,14 +51,14 @@
     grid-area: images;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-template-rows: auto 1fr;
+    grid-template-rows:  1fr;   
     grid-template-areas: 
     "active active active"
     "idle idle idle";
     grid-gap: 5px;
 
     grid-column: 1/2;
-    grid-row: 1/3;
+    /* grid-row: 1/3; */
 }
 
 .box .images .img-holder img {
@@ -254,4 +255,186 @@
     font-size: 14px;
     letter-spacing: 2px;
     transition: all 0.2s ease;
+}
+
+
+/* ////////////////////// slider ///////////////////////// */
+
+.images{
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slider{
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 600px;
+    height: 500px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 600px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #E53854;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #E53854;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #E53854;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #E53854;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #E53854;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #E53854;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #E53854;
+  }
+
+/* ///////////////////////// table ////////////////////// */
+table {
+    border-collapse: collapse;
+    margin-top: 2em;
+}
+td,th {
+    border-bottom: 1px black solid;
+}
+thead {
+    background-color: #090f1b;
+    height: 2em;
+}
+
+.days th a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.days th:hover {
+    background-color: #E53854 !important;
+    transition: .5s;
+}
+
+
+tr {
+    text-align: center;
+    height: 2em;
+
+}
+
+.table-btn {
+    width: 200px;
+    margin-right: 10px;
+    margin-top: 2em;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    background-color: #090f1b;
+    border: none;
+}
+.table-btn:hover{
+    background-color: #E53854;
+    border: none;
+
+}
+
+#d1 {
+    display: table-row-group;
+}
+
+#d2 {
+    display: none;
+}
+#d3{
+    display: none;
 }
