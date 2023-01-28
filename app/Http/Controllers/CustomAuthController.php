@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Hash;
 use App\Models\User;
@@ -35,7 +37,7 @@ class CustomAuthController extends Controller
         // dd();
         $check = $this->create($data);
 
-        return redirect("/");
+        return redirect("login");
     }
     public function create(array $data)
     {
@@ -67,20 +69,19 @@ class CustomAuthController extends Controller
         return redirect('login');
     }
 
-    // public function dashboard()
-    // {
-    //     if(Auth::check()){
-    //         if(Auth::user()->role == 1){
-    //             return redirect('activity');
-    //         } 
-    //         return redirect('/');
-    //     }
-    //     return redirect('/login');
-    // }
 
     public function signOut() {
         session()->flush();
         return redirect('login');
     }
+
+
+    public function search() {
+        $query = $_GET['q'];
+        $events = Event::where('name', 'LIKE' , '%'.$query.'%')->get();
+        return view('search', compact('events'));
+    }
+
+
 
 }

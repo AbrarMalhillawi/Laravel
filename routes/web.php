@@ -85,7 +85,7 @@ Route::resource('event',EventController ::class);
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
-// Route::get('show',[CustomAuthController::class,'show']);
+Route::get('/search',[CustomAuthController::class,'search']);
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
 Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');

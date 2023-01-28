@@ -43,7 +43,7 @@
                      We find the spirit of adventure, knowledge and learning the best methods through experience</p>
                 {{-- <a href="#" class="a">Book trip</a> --}}
 
-                <form action="" class="search-bar">
+                <form action="{{ url('/search') }}" method="GET" class="search-bar">
                     <input type="text" placeholder="search anything " name="q">
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
