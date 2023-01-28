@@ -41,14 +41,14 @@
             <button class="submit" type="submit">Sign In</button>
             <p class="forgot-pass">Forgot Password ?</p>
 
-            <div class="social-media">
+            {{-- <div class="social-media">
                 <ul>
                 <li><img src="images/facebook.png"></li>
                 <li><img src="images/twitter.png"></li>
                 <li><img src="images/linkedin.png"></li>
                 <li><img src="images/instagram.png"></li>
                 </ul>
-            </div>
+            </div> --}}
         </form>
 
             <div class="sub-cont">
