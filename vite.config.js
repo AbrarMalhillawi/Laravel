@@ -1,3 +1,13 @@
+for(let i=0; i <24; i++){
+    console.log(i.length)
+    
+}
+
+
+addEventListener('click',()=>{
+    console.log('hello world')
+})
+
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 

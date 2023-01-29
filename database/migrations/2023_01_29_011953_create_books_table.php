@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description');
-            // $table->string('date');
-            // $table->string('at');
-            // $table->string('to');
-            $table->integer('price');
+            $table->string('user_id');
+            $table->string('event_id');
+            $table->string('hours');
+            $table->string('date');
+            $table->string('status')->default('bending');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('books');
     }
 };

@@ -65,6 +65,8 @@ Route::get('/zzz', function () {
     // $value = session('key');
         // echo session('key') . "<br>";
         echo session('user')->id . "<br>";
+        echo session('user')->id . "<br>";
+        echo Session::get('user')->id;
     // return session()->flush();
         // $users = User::all();
         // foreach($users as $user){

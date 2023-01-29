@@ -14,8 +14,8 @@
 <!-- Sparkline -->
 <script type="text/javascript" src="{{URL::asset('assets/plugins/sparklines/sparkline.js')}}"></script>
 <!-- JQVMap -->
-<script type="text/javascript" src="{{URL::asset('assets/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-<script type="text/javascript" src="{{URL::asset('assets/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+{{-- <script type="text/javascript" src="{{URL::asset('assets/plugins/jqvmap/jquery.vmap.min.js')}}"></script> --}}
+{{-- <script type="text/javascript" src="{{URL::asset('assets/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script> --}}
 <!-- jQuery Knob Chart -->
 <script type="text/javascript" src="{{URL::asset('assets/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
 
@@ -34,8 +34,9 @@
 <script type="text/javascript" src="{{URL::asset('assets/js/adminlte.js')}}"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script type="text/javascript" src="{{URL::asset('assets/js/demo.js')}}"></script>
+{{-- <script type="text/javascript" src="{{URL::asset('assets/js/demo.js')}}"></script> --}}
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script type="text/javascript" src="{{URL::asset('assets/js/pages/dashboard.js')}}"></script>
+
 @yield('scripts')

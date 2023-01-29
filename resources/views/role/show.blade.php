@@ -80,7 +80,7 @@
             </div>
 
             <div class="basic-info">
-                <h1>{{$event->name}}</h1>
+                <h1 class="helowolrd">{{$event->name}}</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
             
 
@@ -109,67 +109,123 @@
                 
                 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
                     
-                <table>
+                <table id="table" border=1>
                     <thead>
                         <tr class="days">
-                                <th class="day1" onclick="day1()"><a href="#"  >28-01-2023</a></th>
-                                <th class="day2" onclick="day2()"><a href="#"  >29-01-2023</a></th>
-                                <th class="day3" onclick="day3()"><a href="#"  >30-01-2023</a></th>
+                                <th class="day1" colspan="3">
+                                    <div class="dateAndDay">
+                                        <div class="amAndpm">
+                                            <button id="amAndpm">am</button>
+                                        </div>
+                                        <div>28-01-2023</div>
+                                    </div>
+                                </th>
                         </tr>
                     </thead>
 
-                    <tbody id="d1">
-                        <tr> <th>Time</th> <th>Price</th> <th>Available</th> </tr>
-                        <tr> <td><input type="checkbox"> 12:30-17:00</td> <td>10.0</td> <td>0</td> </tr>
-                        <tr> <td><input type="checkbox"> 15:00-19:30</td> <td>10.0</td> <td>12</th> </tr>
-                        <tr> <td><input type="checkbox"> 17:30-22:00</td> <td>10.0</td> <td>18</td> </tr>
-                    </tbody>
-
-                    <tbody id="d2">
-                        <tr> <th>Time</th> <th>Price</th> <th>Available</th> </tr>
-                        <tr> <td><input type="checkbox"> 9:30-14:00</td> <td>10.0</td> <td>20</td> </tr>
-                        <tr> <td><input type="checkbox"> 11:30-16:00</td> <td>10.0</td> <td>18</th> </tr>
-                        <tr> <td><input type="checkbox"> 19:00-23:30</td> <td>10.0</td> <td>1</td> </tr>
-                    </tbody>
-
-                    <tbody id="d3">
-                        <tr> <th>Time</th> <th>Price</th> <th>Available</th> </tr>
-                        <tr> <td><input type="checkbox"> 8:00-12:30</td> <td>10.0</td> <td>40</td> </tr>
-                        <tr> <td><input type="checkbox"> 15:00-19:30</td> <td>10.0</td> <td>37</th> </tr>
-                        <tr> <td><input type="checkbox"> 18:30-23:00</td> <td>10.0</td> <td>47</td> </tr>
+                    <tbody id="parentbodyTable">
+                            {{-- JAVA SCRIPT LINE 37 TO -- --}}
                     </tbody>
                     
                 </table>
 
-                <button type="submit" class="table-btn">submit</button>
-
-
+                <div class="bookAndReserve">
+                    <button id="sendDate" disabled class="bookBtn">book</button>
+                    <div id="book">
+                        {{-- JAVASCRIPT --}}
+                        you reserved 1-5-6-11
+                    </div>
+                </div>
+                <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
                 <script>
-                    var hamburger2 = document.querySelector(".hamburger2");
-                    var menu2 = document.querySelector(".menu2");
+                    
+                  let userId = document.getElementById('user').value
+                  let amAndpm = document.getElementById('amAndpm')
+                //   console.log(amAndpm.innerHTML)
+                  amAndpm.addEventListener('click',()=>{
+                    if(amAndpm.innerHTML == 'am'){
+                        amAndpm.innerHTML = 'pm'
+                    }else{
+                        amAndpm.innerHTML = 'am'
+                    }
+                  })
+                  let parentbodyTable = document.getElementById('parentbodyTable')
+                    let bodyTable =  `<tr>`
+                    for(let i=1; i <13; i++){
+                        let className = `hour${i}`
+                    bodyTable += `<td class=" ${className}" ><button class="hour" onclick="myFunction(${i})" id="hour1">${i}</button></td>`
+                        if(i== 3 || i == 6 || i == 9){
+                            bodyTable += `</tr><tr>`
+                        }
+                    }
+                    bodyTable += `</tr>`
+                    parentbodyTable.innerHTML = bodyTable
+                    // console.log(bodyTable)
+                    let hour = document.getElementsByClassName('hour')
+                    let arr = []
+                    function myFunction(id) {
+                        if(arr.indexOf(id) == -1){
+                            arr.push(id)
+                        }else{
+                            arr = arr.filter(e => e != id)
+                        }
+                        hour[id - 1].classList.toggle("onCount")
+                        
+                        // console.log(hour[id-1])
+                        arr.sort(function(a, b){return a-b});
+                        retrieveData()
+                    }
+                    // let bookBtn = document.getElementsByClassName('bookBtn')[0]
+                    let bookBtn = document.getElementById('sendDate')
+                    function retrieveData(){
+                        let book = document.getElementById('book')
+                        book.innerHTML = `you reserved at ${arr.join(' - ')}`
+                        book.style.marginTop = '25px'
+                        // console.log(bookBtn)
+                        bookBtn.classList.add('table-btn')
+                        bookBtn.disabled = false
+                        
+                        console.log(arr.join('-'))
+                        
+                    }
+                    // bookBtn.addEventListener('click',()=>{
+                    //         console.log('arr')
+                    // })
+                    bookBtn.addEventListener('click',()=>{
+                     console.log(arr)
+                     var dateObj = new Date();
+                    var month = dateObj.getUTCMonth() + 1; //months from 1-12
+                    var day = dateObj.getUTCDate();
+                    var year = dateObj.getUTCFullYear();
 
-                    hamburger2.addEventListener("click", function(){
-                        menu2.classList.toggle("active");
+                    newdate = year + "-" + month + "-" + day;
+                    eventId = window.location.href.slice(-1)
+                     let data = {
+                        hours: arr.join('-'),
+                        date: newdate,
+                        event_id: eventId,
+                        user_id: userId,
+                     }
+                     console.log(data)
+                     fetch("http://127.0.0.1:8000/api/books", {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
                     })
+                    .then(response => response.json())
+                    .then(json => console.log(json));
 
+                  })
 
-                    function day1() {
-                        document.getElementById('d1').style.display="table-row-group";
-                        document.getElementById('d2').style.display="none";
-                        document.getElementById('d3').style.display="none";
-                    }
-
-                    function day2() {
-                        document.getElementById('d2').style.display="table-row-group";
-                        document.getElementById('d1').style.display="none";
-                        document.getElementById('d3').style.display="none";
-                    }
-
-                    function day3() {
-                        document.getElementById('d3').style.display="table-row-group";
-                        document.getElementById('d2').style.display="none";
-                        document.getElementById('d1').style.display="none";
-                    }
+fetch("http://127.0.0.1:8000/api/books")
+   // Converting received data to JSON
+.then(response => response.json())
+.then(json => { 
+console.log(json)
+});
+ 
 
                 </script> 
 

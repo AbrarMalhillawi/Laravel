@@ -9,6 +9,7 @@ class Event extends Model
 {
     use HasFactory;
     protected $fillable = ['name','description','price'];
+    // protected $fillable = ['name','description','price', 'date', 'to', 'at'];
 
     public function users(){
         return $this->belongsToMany(User::class)->withTimestamps();

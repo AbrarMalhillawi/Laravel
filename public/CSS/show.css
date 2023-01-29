@@ -16,6 +16,7 @@
     margin: 0;
 }
 
+
 .show {
     min-height: 100vh;
     display: flex;
@@ -230,14 +231,14 @@
     color: white;
 }
 
-.flatpickr-calendar,.flatpickr-rContainer,.flatpickr-days,.flatpickr-day {
+/* .flatpickr-calendar,.flatpickr-rContainer,.flatpickr-days,.flatpickr-day { */
     /* width: 100% !important; */
 
-}
-.dayContainer{
+/* } */
+/* .dayContainer{ */
     /* min-width: 100% !important; */
 
-}
+/* } */
 
 .calendar button{
     background-color: #E53854;
@@ -436,5 +437,59 @@ tr {
     display: none;
 }
 #d3{
+    display: none;
+}
+
+.dateAndDay{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+}
+
+.amAndpm{
+    height: 100%;
+}
+#amAndpm{
+    /* background-color: #E53854; */
+    height: 25px;
+    width: 35px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.hour{
+    width: 100%;
+    height: 32px;
+    border: none;
+}
+.onCount{
+    
+    background-color: #E53854;
+}
+
+.bookAndReserve{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bookBtn{
+    width: 150px;
+    height: 40px;
+}
+
+#book{
+    width: 70%;
+    background-color: #ccc;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    padding-left: 30px;
+    font-size: 1.2rem;
+    /* padding: 10px; */
+}
+
+#sendData{
     display: none;
 }

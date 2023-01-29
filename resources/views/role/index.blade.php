@@ -43,9 +43,7 @@
 
 	@foreach ($events as $event)
 		<a href="{{route('event.show',$event->id)}}">
-   <div>
 	{{$event->name}}
-   </div>
 		</a>
 	@endforeach
 </section>
@@ -61,13 +59,15 @@
 			<section id="slides-par">
 				<div class="divcontainer">
 					<div class="slides">
+						@foreach ($events as $event)
 						<div class="slide_1 slide_2">
 							<div class="slide-info">
-									<a href="/show">
-										<p>Gun</p>
+							<a href="{{route('event.show',$event->id)}}">
+									<p>{{$event->name}}</p>
 									</a>
 								</div>
 							</div>
+							@endforeach
 
 						<div class="slide_1 slide_3">
 							<div class="slide-info">
