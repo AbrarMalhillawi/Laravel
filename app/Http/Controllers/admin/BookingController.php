@@ -16,11 +16,11 @@ class BookingController extends Controller
      */
     public function index()
     { $array=[];
-        foreach(User::all() as $user){
-            foreach($user->events as $event){
-               $array[]=$event;
-            }
-        }
+        // foreach(User::all() as $user){
+        //     foreach($user->events as $event){
+        //        $array[]=$event;
+        //     }
+        // }
         // $books=User::findOrFail('1');
         return view('admin.booking.index',compact('array'));
     }

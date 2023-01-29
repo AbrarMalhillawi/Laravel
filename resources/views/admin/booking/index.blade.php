@@ -56,198 +56,198 @@
                 <tbody>
                     <tr>
                         <td>1  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>2  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>3  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>4  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>5  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>6  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>7  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                     <tr>
                         <td>8  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>9  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>10  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>11  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>12  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>13  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>14  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                     <tr>
                         <td>15  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>16  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>17  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>18  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>19  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>20  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>21  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                     <tr>
                         <td>22  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>23  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>24  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>25  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>26  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>27  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>28  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                     </tr>
                     <tr>
                         <td>29  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>30  
-                            <form action="">
+                            {{-- <form action="">
                                 <input type="text">
                                 <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
                         <td>31  
-                            <form action="">
+                            {{-- <form action="">
+                                <input id="input" type="text">
                                 <input type="text">
-                                <input type="text">
-                            </form>
+                            </form> --}}
                         </td>
 
                         <td> </td>
@@ -265,5 +265,10 @@
 
 
 @section('scripts')
-    
+<script type="text/javascript" >
+let input = document.getElementById('input')
+console.log(input)
+    console.log(input)
+    console.log('hello')
+    </script>
 @endsection

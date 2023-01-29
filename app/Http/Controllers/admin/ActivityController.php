@@ -59,6 +59,7 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $request->validate([
             'name' => 'required',
             'description' => 'required',
@@ -66,14 +67,16 @@ class ActivityController extends Controller
             'image' => 'required|mimes:jpg,png,jpeg'
         ]);
 
-
+        $date = strip_tags($request->input('date'));
         $newImageName = time() . '_' . $request->name . '.' . 
         $request->image->extension();
         $request->image->move(public_path('images'), $newImageName);
-
         $activity = Event::create([
             'name' => strip_tags($request->input('name')),
             'description' => strip_tags($request->input('description')),
+            // 'date' => $date,
+            // 'at' => strip_tags($request->input('at')),
+            // 'to' => strip_tags($request->input('to')),
             'price' => strip_tags($request->input('price')),
         ]);
 
