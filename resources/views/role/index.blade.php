@@ -77,13 +77,14 @@
 								</a>
 							</div>
 						</div>
+					{{-- -----------------------------------------------------------	 --}}
 						<div class="slide_1 slide_5">
 							<div class="slide-info">
 								<a href="/show">
-
 									<p>Bow</p>
 								</a>
 							</div>
+							{{-- ------------------------------------------------------ --}}
 						</div>
 						<div class="slide_1 slide_6">
 							<div class="slide-info">
