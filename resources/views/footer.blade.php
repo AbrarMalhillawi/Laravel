@@ -27,9 +27,9 @@
   	 		<div class="footer-col">
   	 			<h4>Gallery</h4>
 			
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg" alt="image">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.15.43 PM (1).jpeg" alt="image">
-				<img src="images/WhatsApp Image 2023-01-24 at 3.16.32 PM (1).jpeg" alt="image">
+				<img src="{{URL::asset('images/WhatsApp Image 2023-01-24 at 3.16.09 PM.jpeg')}}" alt="image">
+				<img src="{{URL::asset('images/WhatsApp Image 2023-01-24 at 3.15.43 PM (1).jpeg')}}" alt="image">
+				<img src="{{URL::asset('images/WhatsApp Image 2023-01-24 at 3.16.32 PM (1).jpeg')}}" alt="image">
   	 				
   	 			
   	 		</div>
