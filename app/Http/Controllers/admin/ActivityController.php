@@ -48,7 +48,6 @@ class ActivityController extends Controller
     public function create()
     {
         return view('admin.activityTable.create');
-           
     }
 
     /**
@@ -121,14 +120,21 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $newImageName = time() . '_' . $request->name . '.' . 
+        $request->image->extension();
+        $request->image->move(public_path('images'), $newImageName);      
         $event=Event::findorFail($id);
         $event->name=$request->name;
         $event->description=$request->description;
         $event->price=$request->price;
         $event->type=$request->type;
+        // $event->image->url=$newImageName;
         $event->duration=$request->duration;
-       
         $event->save();
+        
+        $event->image()->update([
+            'url' =>  $newImageName
+        ]);
          return redirect()->route('activity.index');
     }
 

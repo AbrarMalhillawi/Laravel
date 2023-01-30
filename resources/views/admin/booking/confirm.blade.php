@@ -1,3 +1,14 @@
+<style>
+  .Dashboard,.Activity,.Users{
+    background-color: none !important;
+  }
+  .Booking{
+    background-color: #007bff !important;
+    
+  }
+</style>
+
+
 <link rel="stylesheet" href="{{URL::asset('./css/confirm.css')}}">
 
 
