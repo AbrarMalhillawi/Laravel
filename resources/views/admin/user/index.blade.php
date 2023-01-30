@@ -1,3 +1,15 @@
+<style>
+  .Booking,.Activity,.Dashboard{
+    background-color: none !important;
+  }
+  .Users {
+    background-color: #007bff !important;
+    
+  }
+</style>
+
+
+
 @extends('admin.layouts.master')
 @section('title')
 <a class="btn btn-primary" href="{{route('user.create')}}">Add New User </a>

@@ -39,13 +39,13 @@
 
 
 	
-{{-- <section>
+<section>
 	@foreach ($events as $event)
 		<a href="{{route('event.show',$event->id)}}">
 	{{$event->name}}
 		</a>
 	@endforeach
-</section> --}}
+</section>
 
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">

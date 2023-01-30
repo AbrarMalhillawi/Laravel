@@ -1,3 +1,11 @@
+<style>
+  [class*=sidebar-dark-] .nav-sidebar>.nav-item.menu-open>.nav-link, [class*=sidebar-dark-] .nav-sidebar>.nav-item:hover>.nav-link, [class*=sidebar-dark-] .nav-sidebar>.nav-item>.nav-link:focus  {
+    /* background: none !important; */
+    color: #c2c7d0 !important;
+  }
+</style>
+
+
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -38,7 +46,7 @@
               {{-- dashboard --}}
 
           <li class="nav-item menu-open">
-            <a href="booking" class="nav-link active">
+            <a href="booking" class="nav-link Dashboard">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -48,7 +56,7 @@
 
           {{-- user --}}
           <li class="nav-item">
-            <a href="user" class="nav-link">
+            <a href="user" class="nav-link Users">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Users
@@ -59,7 +67,7 @@
                    {{-- activity --}}
         <li class="nav-item">
           {{-- {{route('admin.activity.index')}} --}}
-                <a href="activity" class="nav-link" >
+                <a href="activity" class="nav-link Activity" >
                   <i class="nav-icon fas fa-th"></i>
                   <p>Activity</p>
                 </a>
@@ -67,9 +75,9 @@
 
               {{-- booking --}}
               <li class="nav-item">
-                <a href="confirm" class="nav-link">
+                <a href="confirm" class="nav-link Booking">
                   <i class="nav-icon fas fa-th"></i>
-                  <p>Booking</p>
+                  <p>Booking</p> 
                 </a>
               </li>
               

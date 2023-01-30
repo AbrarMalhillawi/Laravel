@@ -1,3 +1,15 @@
+<style>
+  .Booking,.Dashboard,.Users{
+    background-color: none !important;
+  }
+  .Activity {
+    background-color: #007bff !important;
+    
+  }
+</style>
+
+
+
 @extends('admin.layouts.master')
 @section('title')
     
