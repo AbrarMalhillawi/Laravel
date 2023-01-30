@@ -10,16 +10,13 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{asset('assets/img/icon.jpg')}}" class="img-circle elevation-2" alt="User Image">
-        </div>
         <div class="info">
           {{-- Auth::user()->name --}}
           <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
+      {{-- <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
@@ -29,7 +26,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> --}}
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -41,7 +38,7 @@
               {{-- dashboard --}}
 
           <li class="nav-item menu-open">
-            <a href="" class="nav-link active">
+            <a href="booking" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -51,17 +48,18 @@
 
           {{-- user --}}
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="user" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Users
               </p>
             </a>
           </li>
+          {{-- {{route('activity.index')}} --}}
                    {{-- activity --}}
         <li class="nav-item">
           {{-- {{route('admin.activity.index')}} --}}
-                <a href="{{route('activity.index')}}" class="nav-link" >
+                <a href="activity" class="nav-link" >
                   <i class="nav-icon fas fa-th"></i>
                   <p>Activity</p>
                 </a>
@@ -69,7 +67,7 @@
 
               {{-- booking --}}
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="confirm" class="nav-link">
                   <i class="nav-icon fas fa-th"></i>
                   <p>Booking</p>
                 </a>

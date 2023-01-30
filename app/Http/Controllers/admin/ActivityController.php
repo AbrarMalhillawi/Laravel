@@ -48,7 +48,6 @@ class ActivityController extends Controller
     public function create()
     {
         return view('admin.activityTable.create');
-           
     }
 
     /**
