@@ -38,7 +38,22 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Type</label>
-          <input type="text" class="form-control" name="type" value="{{$event->type}}">
+          {{-- <input type="text" class="form-control" name="type" value="{{$event->type}}"> --}}
+          <select id="type" name="type" class="form-multiselect form-control mt-1">
+            <option value="Shooting_Events">shooting Events</option>
+            <option value="Sea_Events">Sea Events</option>
+            <option value="Advanture_Events">Advanture Events</option>
+    </select>
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">duration</label>
+          {{-- <input type="text" class="form-control" name="duration" value="{{$event->duration}}"> --}}
+          <select id="duration" name="duration" class="form-multiselect form-control mt-1">
+            <option value="1_hour"> 1 hour</option>
+            <option value="3_hour"> 3 hour</option>
+            <option value="6_hour"> 6 hour</option>
+    </select>
         </div>
 
         <div class="mb-3">

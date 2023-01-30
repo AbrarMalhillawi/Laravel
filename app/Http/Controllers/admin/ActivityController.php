@@ -65,6 +65,7 @@ class ActivityController extends Controller
             'description' => 'required',
             'price' => 'required',
             'type' => 'required',
+            'duration' => 'required',
             'image' => 'required|mimes:jpg,png,jpeg'
         ]);
 
@@ -77,6 +78,7 @@ class ActivityController extends Controller
             'description' => strip_tags($request->input('description')),
             'price' => strip_tags($request->input('price')),
             'type' => strip_tags($request->input('type')),
+            'duration' => strip_tags($request->input('duration')),
         ]);
 
         $activity->image()->create([
@@ -124,6 +126,7 @@ class ActivityController extends Controller
         $event->description=$request->description;
         $event->price=$request->price;
         $event->type=$request->type;
+        $event->duration=$request->duration;
        
         $event->save();
          return redirect()->route('activity.index');
