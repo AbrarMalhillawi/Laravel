@@ -28,35 +28,20 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Name</label>
       <input type="text" class="form-control" name="name">
-      {{-- <div  class="form-text">We'll never share your email with anyone else.</div> --}}
     </div>
-    {{-- <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">date</label>
-      <input type="date" class="form-control" name="date">
-      <div  class="form-text">We'll never share your email with anyone else.</div>
-    </div> --}}
+   
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Description</label>
       <input type="text" class="form-control" name="description">
     </div>
-    {{-- <div class="row">
-      <div class="col">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label" >At</label>
-          <input type="text" maxlength="2" class="form-control" name="at">
-        </div>
-      </div>
-      <div class="col">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label" >to</label>
-          <input type="text" class="form-control" name="to" maxlength="2">
-        </div>
-      </div>
-    </div> --}}
+    
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Price</label>
       <input type="number" class="form-control" name="price">
-      {{-- <div  class="form-text">We'll never share your email with anyone else.</div> --}}
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Type</label>
+      <input type="text" class="form-control" name="type">
     </div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Image</label>

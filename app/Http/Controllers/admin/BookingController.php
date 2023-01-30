@@ -26,6 +26,18 @@ class BookingController extends Controller
         return view('admin.booking.index',['res' => json_encode($res)]);
     }
 
+
+    public function confirm()
+    {
+        $books = book::all();
+        $res = [];
+        foreach($books as $book){
+           $arr2= ['user_name' => User::find($book->user_id)->name, 'event_name' => Event::find($book->event_id)->name, "hours" => $book->hours, 'date' => $book->date, 'status' => $book->status,'id'=> $book->id];
+           $res[]= $arr2;
+        }
+        return view('admin.booking.confirm',['res' => json_encode($res)]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -78,7 +90,12 @@ class BookingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $book=Book::findorFail($id);
+        $book->status=$request->status;
+        $book->save();
+        // return view('admin.booking.index');
+        return redirect()->route('confirm');
     }
 
     /**

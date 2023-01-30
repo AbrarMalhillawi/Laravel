@@ -36,6 +36,10 @@
           <label for="exampleInputEmail1" class="form-label">Price</label>
           <input type="number" class="form-control" name="price" value="{{$event->price}}">
         </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Type</label>
+          <input type="text" class="form-control" name="type" value="{{$event->type}}">
+        </div>
 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">image</label>

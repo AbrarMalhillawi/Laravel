@@ -68,34 +68,8 @@
         
     </div>
     
-    {{-- <div style=" margin-bottom:30px">
-        <table  class="myTable">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>User Name</th>
-                    <th>Event Name</th>
-                    <th>Duration</th>
-                    <th>date</th>
-                    <th>status</th>
-                    <th>action</th>
-                </tr>
-            </thead>
-            <tbody >
-                @foreach (json_decode($res) as $re)
-                <tr>
-                    <td>{{$re->id}}</td>
-                    <td>{{$re->user_name}}</td>
-                    <td>{{$re->event_name}}</td>
-                    <td>{{$re->hours}}</td>
-                    <td>{{$re->date}}</td>
-                    <td>{{$re->status}}</td>
-                    <td class="action"><button>approve</button> <button>decline</button></td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div> --}}
+    
+  
 @endsection
 
 
