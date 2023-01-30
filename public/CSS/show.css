@@ -442,10 +442,12 @@ tr {
 
 .dateAndDay{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
     height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .amAndpm{
@@ -453,16 +455,21 @@ tr {
 }
 #amAndpm{
     /* background-color: #E53854; */
-    height: 25px;
-    width: 35px;
+    height: 35px;
+    width: 45px;
     border: none;
     border-radius: 4px;
     font-weight: 600;
+    cursor: pointer;
 }
 .hour{
     width: 100%;
     height: 32px;
     border: none;
+    cursor: pointer;
+}
+.hour:hover{
+    background-color: #E53854;
 }
 .onCount{
     
@@ -482,7 +489,8 @@ tr {
 #book{
     width: 70%;
     background-color: #ccc;
-    height: 40px;
+    min-height: 40px;
+    height: auto;
     line-height: 40px;
     border-radius: 5px;
     padding-left: 30px;

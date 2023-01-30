@@ -34,14 +34,21 @@ class CustomAuthController extends Controller
             return redirect('login');
         }
         $books = book::all();
-        $book= Book::find(2);
+        $book= Book::find(1);
+        // dd(User::find($book->user_id)->name);
+        // User::findOrFail($book->user_id)->name
+        // Event::find($book->event_id)->name
         $res = [];
         foreach($books as $book){
-           $arr2= ['user_name' => User::find($book->user_id)->name, 'event_name' => Event::find($book->event_id)->name, "hours" => $book->hours, 'date' => $book->date, 'status' => $book->status,'id'=> $book->id];
+            $event_name = Event::findOrFail($book->event_id)->name;
+            $user_name = User::find($book->user_id)->name;
+            dd($user_name);
+           $arr2= ['user_name' => null, 'event_name' => null, "hours" => $book->hours, 'date' => $book->date, 'status' => $book->status,'id'=> $book->id];
           if(session('user')->id == $book->user_id){
               $res[]= $arr2;
           }
         }
+        dd($res);
         return view('user_profile',['res' => json_encode($res)]);
         // return view('user_profile');
     }

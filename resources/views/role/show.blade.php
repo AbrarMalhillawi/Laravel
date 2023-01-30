@@ -171,30 +171,21 @@
                         }else{
                             arr = arr.filter(e => e != id)
                         }
-                        hour[id - 1].classList.toggle("onCount")
-                        
-                        // console.log(hour[id-1])
+                        hour[id - 1].classList.toggle("onCount")                        
                         arr.sort(function(a, b){return a-b});
                         retrieveData()
                     }
-                    // let bookBtn = document.getElementsByClassName('bookBtn')[0]
                     let bookBtn = document.getElementById('sendDate')
                     function retrieveData(){
                         let book = document.getElementById('book')
                         book.innerHTML = `you reserved at ${arr.join(' - ')}`
                         book.style.marginTop = '25px'
-                        // console.log(bookBtn)
                         bookBtn.classList.add('table-btn')
-                        bookBtn.disabled = false
-                        
-                        console.log(arr.join('-'))
-                        
+                        bookBtn.disabled = false                        
                     }
-                    // bookBtn.addEventListener('click',()=>{
-                    //         console.log('arr')
-                    // })
                     bookBtn.addEventListener('click',()=>{
                      console.log(arr)
+                     book.innerHTML = `your reservation will be confirmed in 24 hours to pursuit your application check your profile`
                      var dateObj = new Date();
                     var month = dateObj.getUTCMonth() + 1; //months from 1-12
                     var day = dateObj.getUTCDate();
@@ -219,7 +210,6 @@
                     })
                     .then(response => response.json())
                     .then(json => console.log(json));
-
                   })
 
 fetch("http://127.0.0.1:8000/api/books")
