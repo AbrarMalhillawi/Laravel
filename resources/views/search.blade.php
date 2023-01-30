@@ -8,35 +8,35 @@
 <section></section>
 <div class="container mt-5 border shadow-lg p-3 mb-5 bg-white rounded ">
     @if (count($events) > 0)
-    @foreach ($events as $event)
     <table class="table table-striped thead-dark">
       <thead class="table table-striped text-white thead-dark">
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Price</th>
-          <th scope="col">Image</th> 
-          <th scope="col">See More</th>      
+          <th scope="col" style="color: black">Name</th>
+          <th scope="col" style="color: black">Description</th>
+          <th scope="col" style="color: black">Price</th>
+          <th scope="col" style="color: black">Image</th> 
+          <th scope="col" style="color: black">See More</th>      
         </tr>
       </thead>    
       <tbody>
+          @foreach ($events as $event)
         <tr>
-          <td class="text-center pt-5 fs-3">{{$event->name}}</td>
-          <td class="text-center pt-5 fs-3">{{$event->description}}</td>
-          <td class="text-center pt-5 fs-3">{{$event->price}}</td>
+          <td class="text-center pt-3 fs-5">{{$event->name}}</td>
+          <td class="text-center pt-3 fs-5">{{$event->description}}</td>
+          <td class="text-center pt-3 fs-5">{{$event->price}}</td>
           <td class="text-center mt-5">        
-            <img src="{{asset('images/'.$event->image->url)}}" style="height: 150px; width:150px; 
+            <img src="{{asset('images/'.$event->image->url)}}" style="height: 100px;line-height: 100px; width:100px; 
             display:block">
           </td>
   
-          <td>   
-            <a class="btn btn-danger text-center mt-5">See More</a>
+          <td >   
+            <a  class="btn btn-danger text-center mt-3 " href="{{route('event.show',$event->id)}}">Show More</a>
           </td>
-        </td>
+        {{-- </td> --}}
+      </tr>
+      @endforeach
       </tbody>
-    </tr>
     </table>
-    @endforeach
     @else
     <h1 class="text-center text-danger fw-bold fs-3">No Event</h1>
     @endif

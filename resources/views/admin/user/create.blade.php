@@ -48,11 +48,12 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Role</label>
             <input type="number" class="form-control" name="role">
+            <span class="text-muted">choose number 1 for admin, 0 for user</span>
           </div>
 
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label ">Image</label>
-            <input type="file" class="form-control" name="image">
+            <input type="file"  name="image">
           </div>
         <button type="submit" class="btn btn-primary">Create Now</button>
     

@@ -17,10 +17,10 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center">
         <div class="info">
           {{-- Auth::user()->name --}}
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="{{ route('userProfile') }}" class="d-block">{{session('user')->name}}</a>
         </div>
       </div>
 

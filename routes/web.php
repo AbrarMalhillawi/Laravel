@@ -69,7 +69,7 @@ Route::get('/zzz', function () {
     // $value = session('key');
         // echo session('key') . "<br>";
         echo session('user')->id . "<br>";
-        echo session('user')->id . "<br>";
+        echo session('user')->role . "<br>";
         echo Session::get('user')->id;
     // return session()->flush();
         // $users = User::all();
@@ -87,7 +87,7 @@ Route::get('/zzz', function () {
 
 
 Route::resource('activity',ActivityController ::class)->middleware('board');
-Route::resource('booking',BookingController ::class);
+Route::resource('booking',BookingController ::class)->middleware('board');
 Route::resource('user',UserController ::class)->middleware('board');
 Route::resource('event',EventController ::class);
 

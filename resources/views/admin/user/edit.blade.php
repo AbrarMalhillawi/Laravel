@@ -44,6 +44,7 @@
       <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Role</label>
           <input type="number" name="role" class="form-control" value="{{$user->role}}">
+          <span class="text-muted">choose number 1 for admin, 0 for user</span>
         </div>
 
   

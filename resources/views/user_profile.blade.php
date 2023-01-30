@@ -112,13 +112,14 @@
                  </pre>
               <div class="text-center">
                 <h3>
-                  Jack Alloussi<span class="font-weight-light">, 19</span>
+                  {{session('user')->name}}
+{{-- <span class="font-weight-light">, 19</span> --}}
                 </h3>
                 <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                  <i class="ni location_pin mr-2"></i>AMMAN, JORDAN
                 </div>
                 <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>software engineer - zaytoon University
+                  <i class="ni business_briefcase-24 mr-2"></i>software engineer 
                 </div>
                 
               </div>
@@ -205,7 +206,7 @@
                                     @foreach (json_decode($res) as $re)
                                     <div id="input-address" class="form-control form-control-alternative"> 
                                       <div class="test">
-                                        <p> your resrvation At <strong>{{$re->event_name}}</strong> was </p>
+                                        <p> your resrvation At <strong>{{$re->event_name}}</strong> is </p>
                                         @if ($re->status == 'bending')
                                           <button class="Waiting">bending</button>
                                           @elseif ($re->status == 'decline')

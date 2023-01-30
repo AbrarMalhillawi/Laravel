@@ -24,48 +24,50 @@
                 
                     <!--image slider start-->
                     <div class="slider">
-                      <div class="slides">
-                        <!--radio buttons start-->
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-                        <!--radio buttons end-->
-                        <!--slide images start-->
-                        <div class="slide first">
-                          <img src="{{URL::asset('images/sea/Party boat.jpeg')}}" alt="">
+                        <div class="slides">
+                            <!--radio buttons start-->
+                            {{-- <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4"> --}}
+                            <!--radio buttons end-->
+                            <!--slide images start-->
+                            <div class="slide first">
+                                <img src="{{asset('images/'.$event->image->url)}}" alt="">
+                                {{-- src="{{asset('images/'.$event->image->url)}}" --}}
+                            {{-- <img src="{{URL::asset('images/sea/Party boat.jpeg')}}" alt=""> --}}
+                            </div>
+                            {{-- <div class="slide">
+                            <img src="{{URL::asset('images/sea/Net fishing.jpg')}}" alt="">
+                            </div>
+                            <div class="slide">
+                            <img src="{{URL::asset('images/sea/Fly fishing.jpeg')}}" alt="">
+                            </div>
+                            <div class="slide">
+                            <img src="{{URL::asset('images/sea/back.jpg')}}" alt="">
+                            </div> --}}
+                            <!--slide images end-->
+                            <!--automatic navigation start-->
+                            {{-- <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            </div> --}}
+                            <!--automatic navigation end-->
                         </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/Net fishing.jpg')}}" alt="">
-                        </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/Fly fishing.jpeg')}}" alt="">
-                        </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/back.jpg')}}" alt="">
-                        </div>
-                        <!--slide images end-->
-                        <!--automatic navigation start-->
-                        <div class="navigation-auto">
-                          <div class="auto-btn1"></div>
-                          <div class="auto-btn2"></div>
-                          <div class="auto-btn3"></div>
-                          <div class="auto-btn4"></div>
-                        </div>
-                        <!--automatic navigation end-->
-                      </div>
-                      <!--manual navigation start-->
-                      <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                      </div>
+                            <!--manual navigation start-->
+                            {{-- <div class="navigation-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                                <label for="radio3" class="manual-btn"></label>
+                                <label for="radio4" class="manual-btn"></label>
+                            </div> --}}
                       <!--manual navigation end-->
                     </div>
                     <!--image slider end-->
                 
-                    <script type="text/javascript">
+                    {{-- <script type="text/javascript">
                     var counter = 1;
                     setInterval(function(){
                       document.getElementById('radio' + counter).checked = true;
@@ -74,14 +76,15 @@
                         counter = 1;
                       }
                     }, 5000);
-                    </script>
+                    </script> --}}
                 
                 {{-- ///////////////////////////// end slider //////////////////////////////////// --}}
             </div>
 
             <div class="basic-info">
                 <h1 class="helowolrd">{{$event->name}}</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
+                <p><span style="font-size:1.2rem">Details:</span> {{$event->description}}.</p>
+                <p><span style="font-size:1.2rem">Price:</span> {{$event->price}}jd</p>
             
 
                 {{-- <div class="description"> --}}
@@ -117,7 +120,7 @@
                                         <div class="amAndpm">
                                             <button id="amAndpm">am</button>
                                         </div>
-                                        <div>28-01-2023</div>
+                                        <div>2023-1-31</div>
                                     </div>
                                 </th>
                         </tr>
@@ -131,10 +134,17 @@
 
                 <div class="bookAndReserve">
                     <button id="sendDate" disabled class="bookBtn">book</button>
+                    @if (!session('user'))
+                    <div id="book">
+                        {{-- JAVASCRIPT --}}
+                        You need to login to make your resrvation
+                    </div>
+                    @else
                     <div id="book">
                         {{-- JAVASCRIPT --}}
                         click to choose your time
                     </div>
+                    @endif
                 </div>
                 @if (session('user'))
                 <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
@@ -195,8 +205,8 @@
                     eventId = window.location.href.slice(-1)
                      let data = {
                         hours: arr.join('-'),
-                        // date: newdate,
-                        date: '2023-1-30',
+                        date: newdate,
+                        date: '2023-1-31',
                         event_id: eventId,
                         user_id: userId,
                      }
