@@ -25,6 +25,10 @@ class CustomAuthController extends Controller
     }
     public function userProfile()
     {   
+
+        if(!session('user')){
+            return redirect('login');
+        }
         return view('user_profile');
     }
     
@@ -61,6 +65,7 @@ class CustomAuthController extends Controller
 
      public function signin(Request $request)
     {
+        // dd($request);
         $request->validate([
             'email' => 'required',
             'password' => 'required',

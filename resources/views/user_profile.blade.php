@@ -22,7 +22,7 @@
 
   <div class="main-content">
     <!-- Top navbar -->
-    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+    {{-- <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
@@ -79,7 +79,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> --}}
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 260px; background-size: cover; background-position: center top;">
       <!-- Mask -->
@@ -237,11 +237,16 @@
                 </div>
               </div>
             </div>
-
+            {{-- user ID --}}
+            @if (session('user'))
+            <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
+            @endif
             <script>
+                
+                // let userId = document.getElementById('user');
                 let editBtn = document.getElementById('edit');
                 let historyBtn = document.getElementById('history');
-
+                // console.log(userId)
                 function edit() {
 
                   editBtn.style.display= "block";
@@ -255,7 +260,21 @@
                   historyBtn.style.display= "block";
 
                 }
-
+                // console.log('hello')
+                // async function getUsers() {
+                // let url = 'http://127.0.0.1:8000/api/books';
+                // try {
+                //     let res = await fetch(url);
+                //     return await res.json();
+                // } catch (error) {
+                //     console.log(error);
+                // }
+                // }
+                // async function renderUsers() {
+                // let books = await getUsers();
+                //   let status = books.filter(e => e.user_id == userId)
+                // }
+                // renderUsers()
             </script>
  
     @include('footer')

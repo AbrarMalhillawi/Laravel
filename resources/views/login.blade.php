@@ -27,14 +27,25 @@
               <div class="card bg-secondary shadow">
                   
                 <h2 class="mb-5">Login</h2>
+                @if (count($errors) > 0)
+                <?php redirect('login'); ?>
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                 <div class="card-body">
-                <form>
+                <form  action="{{route('postlogin')}}" method="POST">
+                    @csrf
                     <div class="pl-lg-4">
                     <div class="row2">
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-email">Email address</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                                <input type="email" id="input-email" class="form-control form-control-alternative" name="email" placeholder="jesse@example.com">
                             </div>
                         </div>
                     
@@ -43,7 +54,7 @@
                         <div class="col-lg-6">
                         <div class="form-group focused">
                             <label class="form-control-label" for="input-first-name">Password</label>
-                            <input type="Password" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
+                            <input type="Password" id="input-first-name" class="form-control form-control-alternative" name="password" placeholder="First name" value="Lucky">
                             <br>
                             <p>Don't have account ?<a href="register">Register</a></p>
                         </div>
@@ -52,7 +63,7 @@
                     </div>
                     </div>
                     <div class="col-4 text-right">
-                        <button class="btn btn-sm btn-primary">Submit</button>
+                        <button class="btn btn-sm btn-primary" type="submit">Submit</button>
                     </div>
                     <hr class="my-4">
                     
