@@ -18,7 +18,8 @@
 
 
 @section('content')
-<div class="container border shadow-lg p-3 mb-5 bg-white rounded">
+<h1>hello</h1>
+{{-- <div class="container border shadow-lg p-3 mb-5 bg-white rounded">
     <form action="{{route('activity.update',$event->id)}}" method="POST" enctype="multipart/form-data">
       @csrf
       @method('PUT')
@@ -47,7 +48,7 @@
       </form>
     
     </div>
-    
+     --}}
 @endsection
 
 

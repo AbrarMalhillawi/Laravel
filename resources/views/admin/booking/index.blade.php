@@ -26,6 +26,7 @@
 <div class="container">
     <div class="background">
 
+           <div class="headOfTable">
             <select name="cars" id="cars">
                 <option value="volvo">Jan</option>
                 <option value="saab">Feb</option>
@@ -40,235 +41,109 @@
                 <option value="audi">Nov</option>
                 <option value="audi">Dec</option>
             </select>
-
-            <table>
+            <div class="colors">
+                <span style="font-weight:700">events traffic </span>
+                <span style="background:#2C74B3;" class="square">1 </span> 
+                <span style="background:#205295;" class="square">2 </span> 
+                <span style="background:#144272;" class="square">3 </span> 
+                <span style="background:#0A2647;" class="square">4+ </span> 
+            </div>
+           </div>
+            <table class="jackTable">
                 <thead>
-                    <tr>
-                        <th>SU</th>
-                        <th>MO</th>
-                        <th>TU</th>
-                        <th>WE</th>
-                        <th>TH</th>
-                        <th>FR</th>
-                        <th>SA</th>
+                    <tr class="jackTr">
+                        <th class="jackTh">SU</th>
+                        <th class="jackTh">MO</th>
+                        <th class="jackTh">TU</th>
+                        <th class="jackTh">WE</th>
+                        <th class="jackTh">TH</th>
+                        <th class="jackTh">FR</th>
+                        <th class="jackTh">SA</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>2  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>3  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>4  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>5  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>6  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>7  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>9  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>10  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>11  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>12  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>13  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>14  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>15  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>16  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>17  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>18  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>19  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>20  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>21  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>22  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>23  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>24  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>25  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>26  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>27  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>28  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>29  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>30  
-                            {{-- <form action="">
-                                <input type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-                        <td>31  
-                            {{-- <form action="">
-                                <input id="input" type="text">
-                                <input type="text">
-                            </form> --}}
-                        </td>
-
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                    </tr>
+                <tbody class="tbody">
                 </tbody>
             </table>
         </div>
+        
     </div>
-       
-
+    
+    <div style=" margin-bottom:30px">
+        <table  class="myTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>User Name</th>
+                    <th>Event Name</th>
+                    <th>Duration</th>
+                    <th>date</th>
+                    <th>status</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody >
+                @foreach (json_decode($res) as $re)
+                <tr>
+                    <td>{{$re->id}}</td>
+                    <td>{{$re->user_name}}</td>
+                    <td>{{$re->event_name}}</td>
+                    <td>{{$re->hours}}</td>
+                    <td>{{$re->date}}</td>
+                    <td>{{$re->status}}</td>
+                    <td class="action"><button>approve</button> <button>decline</button></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
 
 
 @section('scripts')
 <script type="text/javascript" >
-let input = document.getElementById('input')
-console.log(input)
-    console.log(input)
-    console.log('hello')
+
+let arr = []
+let colors = ['#fff', '#2C74B3', '#205295', '#144272', '#0A2647']
+async function getUsers() {
+let url = 'http://127.0.0.1:8000/api/books';
+try {
+    let res = await fetch(url);
+    return await res.json();
+} catch (error) {
+    console.log(error);
+}
+}
+async function renderUsers() {
+let books = await getUsers();
+let html = '<tr class="jackTr">';
+const today = new Date('2023-01-1')
+    for(let i=0; i<35; i++){
+        // if(i % 7)
+    let tomorrow =  new Date('2023-01-1')
+    tomorrow.setDate(today.getDate() + i)
+    let day = `${tomorrow}`.split(' ')[2]
+    let book = books.filter(e => {
+        if(e.date.split('-')[2] == day){
+            return e
+        }
+    })
+    html += `<td class='jackTd' ><button onclick="myFunction(${i})" style="background:${book.length >= 4 ? colors[colors.length -1] : colors[book.length]}; color:${book.length > 0 ? '#fff' : '#000'}" class="box">${day}</button></td>`
+    if((i+1) % 7 == 0 && i < 30){
+        html += '</tr><tr class="jackTr">'
+    }
+    if(book.length >= 1){
+        arr.push({day, book})
+    }
+}
+html += '</tr>'
+myFunction(arr)
+let container = document.querySelector('.tbody');
+container.innerHTML = html;
+
+}
+renderUsers();
+function myFunction(arr){
+    console.log(arr)
+}
     </script>
 @endsection

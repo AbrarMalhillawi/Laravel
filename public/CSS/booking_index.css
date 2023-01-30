@@ -3,7 +3,7 @@
 }
 
 .content-wrapper{
-    background-color: #090f1be8 !important;
+    background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
     height: 110vh !important;
 }
 .container{
@@ -16,7 +16,7 @@
     position: absolute;
     right: 2em;
 }
-table {
+.jackTable {
     border-collapse: collapse;
     margin: 2em;
     width: 60em;
@@ -29,11 +29,23 @@ tr {
 td {
     width: 7em;
     font-weight: bolder;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 0 !important;
 }
-th {
+.box{
+    height: 90px;
+    width: 100%;
+    /* background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important; */
+    color: #fff;
+    display: block;
+    padding: 0 !important;
+    border: none;
+}
+.jackTh {
     font-weight: normal;
 }
-tr ,td {
+.jackTr ,.jackTd {
     border: 1px rgb(142, 136, 136) solid;
 }
 
@@ -43,7 +55,7 @@ td form input {
     background: transparent;
     border: none;
 }
-thead tr {
+thead .jackTr {
     border: none;
     text-align: start;
     height: 1em;
@@ -56,3 +68,35 @@ select  {
     border: none;
 }
 
+
+
+.myTable{
+    width: 50%;
+    margin: 0 auto;
+    max-height: 400px !important;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.headOfTable{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+.colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+.square{
+    color:#fff;
+    width:30px;height:30px; 
+    line-height:30px;
+    text-align: center;
+}

@@ -17,12 +17,12 @@ class Board
      */
     public function handle(Request $request, Closure $next)
     {
-        $role = Session::get('user')->role;
-        if($role != 1){
-            return redirect('login');
+        $role = Session::get('user')?->role;
+        if($role == 1){
+            return $next($request);
             // dd('hello');
         }
-
-        return $next($request);
+        
+        return redirect('login');
     }
 }
