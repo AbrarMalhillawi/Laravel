@@ -25,21 +25,31 @@
           <div class="card bg-secondary shadow">
             
             <h2 class="mb-5">Register</h2>
+            @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             <div class="card-body">
-              <form>
+              <form action="{{route('postsignup')}}" method="POST">
+                @csrf
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+                        <input type="text" id="input-username" class="form-control form-control-alternative" name="name" placeholder="Username" >
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <input type="email" id="input-email" class="form-control form-control-alternative" name="email" placeholder="jesse@example.com">
                       </div>
                     </div>
                   </div>
@@ -53,7 +63,7 @@
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                        <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address"  type="text">
                       </div>
                     </div>
                   </div>
@@ -61,15 +71,21 @@
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
+                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" >
                         <br>
                         <p>Already have account ?<a href="login">Login</a></p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">password</label>
+                        <input type="password" id="input-city" class="form-control form-control-alternative" name="password" placeholder="City" >
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 text-right">
-                    <button class="btn btn-sm btn-primary">Submit</button>
+                    <button class="btn btn-sm btn-primary" type="submit">Submit</button>
                 </div>
                 <!-- Description -->
                 <hr class="my-4">
