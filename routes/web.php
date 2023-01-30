@@ -94,11 +94,4 @@ Route::get('/search',[CustomAuthController::class,'search']);
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
 Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
-
-
-
-// Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
-
-// Route::get('/',[CustomAuthController::class,'home']);
-// Route::get('login',[CustomAuthController::class,'login']);
-// Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
+Route::get('confirm', [BookingController::class, 'confirm'])->name('confirm');

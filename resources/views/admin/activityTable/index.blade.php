@@ -29,6 +29,7 @@
         <th scope="col">Name</th>
         <th scope="col">Description</th>
         <th scope="col">Price</th>
+        <th scope="col">type</th>
         <th scope="col">Image</th> 
         <th scope="col">Edit</th>
         <th scope="col">Delate</th>      
@@ -41,6 +42,7 @@
         <td>{{$event->name}}</td>
         <td>{{$event->description}}</td>
         <td>{{$event->price}}</td>
+        <td>{{$event->type}}</td>
         <td>        
           <img src="{{asset('images/'.$event->image->url)}}" style="height: 100px; width:150px; display:block">
         </td>
