@@ -68,7 +68,7 @@
         
     </div>
     
-    <div style=" margin-bottom:30px">
+    {{-- <div style=" margin-bottom:30px">
         <table  class="myTable">
             <thead>
                 <tr>
@@ -95,7 +95,7 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+    </div> --}}
 @endsection
 
 

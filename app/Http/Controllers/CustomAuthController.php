@@ -17,7 +17,15 @@ class CustomAuthController extends Controller
     }
     public function login()
     {   
-        return view('login-register');
+        return view('login');
+    }
+    public function register()
+    {   
+        return view('register');
+    }
+    public function userProfile()
+    {   
+        return view('user_profile');
     }
     
     // public function show()

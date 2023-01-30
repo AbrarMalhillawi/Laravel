@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Session;
 // });
 
 
+Route::get('/lo', function () {
+    return view('login');
+});
+
 
 Route::get('/profile', function () {
     return view('user_profile');
@@ -83,17 +87,20 @@ Route::get('/zzz', function () {
 
 
 Route::resource('activity',ActivityController ::class)->middleware('board');
-Route::resource('booking',BookingController ::class)->middleware('board');
+Route::resource('booking',BookingController ::class);
 Route::resource('user',UserController ::class)->middleware('board');
 Route::resource('event',EventController ::class);
 
 
 Route::get('/',[CustomAuthController::class,'home']);
 Route::get('login',[CustomAuthController::class,'login']);
+Route::get('register',[CustomAuthController::class,'register']);
 Route::get('/search',[CustomAuthController::class,'search']);
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup');
 Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('userProfile', [CustomAuthController::class, 'userProfile'])->name('signout');
+
 
 
 
