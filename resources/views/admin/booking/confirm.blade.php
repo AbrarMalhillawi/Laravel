@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="{{URL::asset('./css/confirm.css')}}">
+
+
 @extends('admin.layouts.master')
 @section('title')
    
@@ -18,7 +21,8 @@
 
 
 @section('content')
-<div style=" margin-bottom:30px">
+
+<div class="table" style=" margin-bottom:30px">
   <table  class="myTable">
       <thead>
           <tr>
@@ -40,19 +44,24 @@
               <td>{{$re->hours}}</td>
               <td>{{$re->date}}</td>
               <td>{{$re->status}}</td>
-              <form action="{{Route('booking.update',$re->id)}}" method="POST">
-                @method('PUT')
-                 @csrf
+                <form action="{{Route('booking.update',$re->id)}}" method="POST">
+                  @method('PUT')
+                  @csrf
                  <input type="hidden" name="status" value="approved">
-              <td class="action"><button type="sumbit">approve</button> </form> 
+              <td class="action">
+                <button type="sumbit" class="approve"><i class="fa-solid fa-check"></i></button> </form> 
 
 
 
                 <form action="{{Route('booking.update',$re->id)}}" method="POST">
                   @method('PUT')
-                   @csrf
-                   <input type="hidden" name="status" value="decline">
-                <td class="action"><button type="sumbit">decline</button> </form> </td>
+                  @csrf
+                  <input type="hidden" name="status" value="decline">
+                  <button type="sumbit" class="decline"><i class="fa-solid fa-x"></i></button> 
+
+                </form> 
+              
+              </td>
     
              
           </tr>
@@ -60,7 +69,7 @@
       </tbody>
   </table>
 </div>
-
+<script src="https://kit.fontawesome.com/b56885f075.js" crossorigin="anonymous"></script>
 @endsection
 
 
