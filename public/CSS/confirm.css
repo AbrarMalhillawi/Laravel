@@ -1,0 +1,48 @@
+.table {
+    margin-left: 80px;
+    height: 100%;
+    width: 90% !important;
+}
+.myTable {
+    border-collapse: collapse;
+    width: 90%;
+
+}
+
+thead  {
+    background-color: #212529;
+    color: white;
+    width: 100% !important;
+}
+
+td {
+    /* border: 1px black solid; */
+    height: 4em;
+}
+
+.action button {
+    width: 5em;
+}
+.approve {
+    background-color: #2dce89;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: .5em;
+    border-radius: 50%;
+    width: 2em !important;
+}
+
+.decline {
+    background-color: #e23715;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: .5em;
+    border-radius: 50%;
+    width: 2em !important;
+    margin-left: .5em;
+}
+form {
+    display: inline-block; 
+}

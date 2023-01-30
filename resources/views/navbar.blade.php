@@ -22,7 +22,7 @@
 					@else
 					<li><a href="{{ route('signout') }}">Logout</a></li>
 					@endif
-					<li><a href="{{ route('userProfile') }}" class="Contact"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="{{ route('userProfile') }}" class="profile"><i class="fa-solid fa-user"></i></a></li>
 
 				</ul>
 			</div>
