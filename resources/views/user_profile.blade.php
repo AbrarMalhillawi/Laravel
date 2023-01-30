@@ -81,6 +81,7 @@
       </div>
     </nav> --}}
     <!-- Header -->
+    {{-- {{$res}} --}}
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 260px; background-size: cover; background-position: center top;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
@@ -201,26 +202,20 @@
                               <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group focused">
+                                    @foreach (json_decode($res) as $re)
                                     <div id="input-address" class="form-control form-control-alternative"> 
-                                        <div class="test">
-                                          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.animi nisi ratione error?</p>
-                                          <button class="Aprove">Aprove</button>
+                                      <div class="test">
+                                        <p> your resrvation At <strong>{{$re->event_name}}</strong> was </p>
+                                        @if ($re->status == 'bending')
+                                          <button class="Waiting">bending</button>
+                                          @elseif ($re->status == 'decline')
+                                          <button class="NotAprove"> rejected</button>
+                                          @elseif ($re->status == 'approved')
+                                          <button class="Aprove">confirmd</button>
+                                          @endif
                                         </div>
                                     </div>
-
-                                    <div id="input-address" class="form-control form-control-alternative"> 
-                                      <div class="test">
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.animi nisi ratione error?</p>
-                                        <button class="NotAprove"> Not Aprove</button>
-                                      </div>
-                                    </div>
-
-                                    <div id="input-address" class="form-control form-control-alternative"> 
-                                      <div class="test">
-                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.animi nisi ratione error?</p>
-                                        <button class="Waiting">Waiting</button>
-                                      </div>
-                                    </div>
+                                    @endforeach
 
                                   </div>
                                 </div>

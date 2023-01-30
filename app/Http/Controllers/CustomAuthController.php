@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
 use Illuminate\Http\Request;
 use Hash;
-use App\Models\User;
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\Event;
+use App\Models\Book;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Termwind\Components\Dd;
+
 class CustomAuthController extends Controller
 {
     public function home()
@@ -29,8 +33,17 @@ class CustomAuthController extends Controller
         if(!session('user')){
             return redirect('login');
         }
-        dd(session('user')->id);
-        return view('user_profile');
+        $books = book::all();
+        $book= Book::find(2);
+        $res = [];
+        foreach($books as $book){
+           $arr2= ['user_name' => User::find($book->user_id)->name, 'event_name' => Event::find($book->event_id)->name, "hours" => $book->hours, 'date' => $book->date, 'status' => $book->status,'id'=> $book->id];
+          if(session('user')->id == $book->user_id){
+              $res[]= $arr2;
+          }
+        }
+        return view('user_profile',['res' => json_encode($res)]);
+        // return view('user_profile');
     }
     
     // public function show()
