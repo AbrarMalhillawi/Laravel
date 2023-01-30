@@ -185,6 +185,12 @@ section#welcome-text p{
     margin-bottom: -100px;
 }
 .slide_1{
+    margin: 0 15px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.slide_1 img{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url();
     background-position: center center;
     background-size: cover;
@@ -197,7 +203,14 @@ section#welcome-text p{
     position: relative;
     transition: all 0.5s ease;
 }
-.slide_1:hover{
+
+.slide_22 img {
+    width: 171px;
+    height: 550px;
+    border-radius: 25px;
+}
+
+.slide_1 img:hover {
     min-width: 250px;
 }
 .slide_1:hover .slide-info{
@@ -251,9 +264,9 @@ section#welcome-text p{
 
 /* ----------------------222-----------sea trips------------------------------------------- */
 
-.slide_22{ 
+/* .slide_22{ 
     background-image:url(../images/sea/Swimming\ races.jpeg);
-}
+} */
 .slide_33{ 
     background-image:url(../images/sea/Fly\ fishing.jpeg);
 }

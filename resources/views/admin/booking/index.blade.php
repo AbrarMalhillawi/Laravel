@@ -1,3 +1,14 @@
+<style>
+    .Booking,.Activity,.Users{
+      background-color: none !important;
+    }
+    .Dashboard {
+      background-color: #007bff !important;
+      
+    }
+  </style>
+  
+
 <link rel="stylesheet" href="{{URL::asset('./css/booking_index.css')}}">
 
 @extends('admin.layouts.master')
