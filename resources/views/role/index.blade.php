@@ -39,13 +39,6 @@
 
 
 	
-<section>
-	@foreach ($events as $event)
-		<a href="{{route('event.show',$event->id)}}">
-	{{$event->name}}
-		</a>
-	@endforeach
-</section>
 
     <!-- Mutiple Slider Section Starts -->
     <section id="water-slider">
@@ -55,65 +48,30 @@
 
 
 
-			<section id="slides-par">
+            <section id="slides-par">
 				<div class="divcontainer">
 					<div class="slides">
-						
-
-						<div class="slide_1 slide_3">
+						@foreach ($events as $event)
+						@if($event->type=="Shooting_Events")
+						<div class="slide_1 slide_22">
+							<img src="{{asset('images/'.$event->image->url)}}" alt="">
 							<div class="slide-info">
-								<a href="/show">
-
-									<p>Pistol</p>
+								<a href="{{route('event.show',$event->id)}}">
+									<p>{{$event->name}}</p>
 								</a>
 							</div>
 						</div>
-						<div class="slide_1 slide_4">
-							<div class="slide-info">
-								<a href="/show">
-
-									<p>Sniper</p>
-								</a>
-							</div>
-						</div>
-					{{-- -----------------------------------------------------------	 --}}
-						<div class="slide_1 slide_5">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Bow</p>
-								</a>
-							</div>
-							{{-- ------------------------------------------------------ --}}
-						</div>
-						<div class="slide_1 slide_6">
-							<div class="slide-info">
-								<a href="/show">
-
-									<p>Assault</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_7">
-							<div class="slide-info">
-								<a href="/show">
-
-									<p>Shatguns</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_8">
-							<div class="slide-info">
-								<a href="/show">
-
-									<p>Old Guns</p>
-								</a>
-							</div>
-						</div>
+						@endif
+					    @endforeach
 					</div>
 				</div>
 			</section>
+
         </div>
     </section>
+
+        </div>
+    </section> 
 
 	<br><br>
 	{{-- ------------------------------------------------------------------------------- --}}
@@ -121,67 +79,21 @@
         <div class="container">
 			<h2 id="Sea">Sea Events</h2>
             <p></p>
-
-
 			<section id="slides-par">
 				<div class="divcontainer">
 					<div class="slides">
+						@foreach ($events as $event)
+						@if($event->type=="Sea_Events")
 						<div class="slide_1 slide_22">
+							<img src="{{asset('images/'.$event->image->url)}}" alt="">
 							<div class="slide-info">
-								<a href="/show">
-									<p>Swimming races</p>
-
+								<a href="{{route('event.show',$event->id)}}">
+									<p>{{$event->name}}</p>
 								</a>
 							</div>
 						</div>
-						<div class="slide_1 slide_33">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Fly fishing</p>
-
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_44">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Net fishing</p>
-
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_55">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Fishing on a boat</p>
-
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_66">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Diving</p>
-
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_77">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Party boat</p>
-
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_88">
-							<div class="slide-info">
-								<a href="/show">
-									<p>small boat trip</p>
-
-								</a>
-							</div>
-						</div>
+						@endif
+					    @endforeach
 					</div>
 				</div>
 			</section>
@@ -194,63 +106,25 @@
         <div class="container">
 			<h2 id="Advanture">Advanture Events</h2>
             <p></p>
-
-
 			<section id="slides-par">
 				<div class="divcontainer">
 					<div class="slides">
-						<div class="slide_1 slide_222">
+						@foreach ($events as $event)
+						@if($event->type=="Advanture_Events")
+						<div class="slide_1 slide_22">
+							<img src="{{asset('images/'.$event->image->url)}}" alt="">
 							<div class="slide-info">
-								<a href="/show">
-									<p>Desert trip</p>
+								<a href="{{route('event.show',$event->id)}}">
+									<p>{{$event->name}}</p>
 								</a>
 							</div>
 						</div>
-						<div class="slide_1 slide_333">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Horse riding</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_444">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Long walk</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_555">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Mountaineering</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_666">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Camel ride</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_777">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Blimp</p>
-								</a>
-							</div>
-						</div>
-						<div class="slide_1 slide_888">
-							<div class="slide-info">
-								<a href="/show">
-									<p>Basketball</p>
-								</a>
-							</div>
-						</div>
+						@endif
+					    @endforeach
 					</div>
 				</div>
 			</section>
+			
         </div>
     </section>
   
