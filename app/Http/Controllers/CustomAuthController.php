@@ -29,6 +29,7 @@ class CustomAuthController extends Controller
         if(!session('user')){
             return redirect('login');
         }
+        dd(session('user')->id);
         return view('user_profile');
     }
     
