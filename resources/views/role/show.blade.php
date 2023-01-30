@@ -133,10 +133,12 @@
                     <button id="sendDate" disabled class="bookBtn">book</button>
                     <div id="book">
                         {{-- JAVASCRIPT --}}
-                        you reserved 1-5-6-11
+                        click to choose your time
                     </div>
                 </div>
+                @if (session('user'))
                 <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
+                @endif
                 <script>
                     
                   let userId = document.getElementById('user').value
@@ -202,7 +204,8 @@
                     eventId = window.location.href.slice(-1)
                      let data = {
                         hours: arr.join('-'),
-                        date: newdate,
+                        // date: newdate,
+                        date: '2023-1-30',
                         event_id: eventId,
                         user_id: userId,
                      }
