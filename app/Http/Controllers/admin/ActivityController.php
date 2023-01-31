@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ActivityController extends Controller
 {
@@ -105,7 +106,9 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        
+        if(count(Event::all()) < $id || $id < 0){
+            return redirect()->back();
+        }
         return view('admin.activityTable.edit', [
             'event' => Event::findOrFail($id)
         ]);
@@ -148,7 +151,8 @@ class ActivityController extends Controller
     {
         $event=Event::findorfail($id);
     //   $event->users()->detach();
-      $event->delete();
+        DB::table('books')->where('event_id', $id)->delete();
+        $event->delete();
  
       return redirect()->route('activity.index');
     }

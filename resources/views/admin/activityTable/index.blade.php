@@ -62,7 +62,7 @@
         </td>
 
         <td>   
-          <a class="btn btn-primary" href="{{route('activity.edit',$event->id)}}">Edit Activity </a>
+          <a class="btn btn-primary" href="{{route('activity.edit',$event->id)}}">Edit</a>
         </td>
         <td> 
           <form action="{{Route('activity.destroy',$event->id)}}" method="POST" >

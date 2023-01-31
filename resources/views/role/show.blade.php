@@ -24,48 +24,50 @@
                 
                     <!--image slider start-->
                     <div class="slider">
-                      <div class="slides">
-                        <!--radio buttons start-->
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-                        <!--radio buttons end-->
-                        <!--slide images start-->
-                        <div class="slide first">
-                          <img src="{{URL::asset('images/sea/Party boat.jpeg')}}" alt="">
+                        <div class="slides">
+                            <!--radio buttons start-->
+                            {{-- <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4"> --}}
+                            <!--radio buttons end-->
+                            <!--slide images start-->
+                            <div class="slide first">
+                                <img src="{{asset('images/'.$event->image->url)}}" alt="">
+                                {{-- src="{{asset('images/'.$event->image->url)}}" --}}
+                            {{-- <img src="{{URL::asset('images/sea/Party boat.jpeg')}}" alt=""> --}}
+                            </div>
+                            {{-- <div class="slide">
+                            <img src="{{URL::asset('images/sea/Net fishing.jpg')}}" alt="">
+                            </div>
+                            <div class="slide">
+                            <img src="{{URL::asset('images/sea/Fly fishing.jpeg')}}" alt="">
+                            </div>
+                            <div class="slide">
+                            <img src="{{URL::asset('images/sea/back.jpg')}}" alt="">
+                            </div> --}}
+                            <!--slide images end-->
+                            <!--automatic navigation start-->
+                            {{-- <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            </div> --}}
+                            <!--automatic navigation end-->
                         </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/Net fishing.jpg')}}" alt="">
-                        </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/Fly fishing.jpeg')}}" alt="">
-                        </div>
-                        <div class="slide">
-                          <img src="{{URL::asset('images/sea/back.jpg')}}" alt="">
-                        </div>
-                        <!--slide images end-->
-                        <!--automatic navigation start-->
-                        <div class="navigation-auto">
-                          <div class="auto-btn1"></div>
-                          <div class="auto-btn2"></div>
-                          <div class="auto-btn3"></div>
-                          <div class="auto-btn4"></div>
-                        </div>
-                        <!--automatic navigation end-->
-                      </div>
-                      <!--manual navigation start-->
-                      <div class="navigation-manual">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                      </div>
+                            <!--manual navigation start-->
+                            {{-- <div class="navigation-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                                <label for="radio3" class="manual-btn"></label>
+                                <label for="radio4" class="manual-btn"></label>
+                            </div> --}}
                       <!--manual navigation end-->
                     </div>
                     <!--image slider end-->
                 
-                    <script type="text/javascript">
+                    {{-- <script type="text/javascript">
                     var counter = 1;
                     setInterval(function(){
                       document.getElementById('radio' + counter).checked = true;
@@ -74,15 +76,19 @@
                         counter = 1;
                       }
                     }, 5000);
-                    </script>
+                    </script> --}}
                 
                 {{-- ///////////////////////////// end slider //////////////////////////////////// --}}
             </div>
 
             <div class="basic-info">
                 <h1 class="helowolrd">{{$event->name}}</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus temporibus corporis repudiandae, consectetur nostrum nisi commodi placeat rerum molestias numquam nihil accusantium deleniti! Enim, nesciunt a quis amet hic officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo accusantium tempora facere doloremque cum iusto, ut neque, fuga omnis libero laborum ullam. At dolorum qui atque labore illo dignissimos.</p>
-            
+                <p><span style="font-size:1.2rem">Details:</span> {{$event->description}}.</p>
+                <p><span style="font-size:1.2rem">Price:</span> {{$event->price}}jd</p>
+                @if (session('user'))
+                <p class="notezohde"><span style="font-size:1.2rem">note:</span> if you clicked on 5 that means your resrvation from 04 to 05 am</p>
+                @endif
+                
 
                 {{-- <div class="description"> --}}
                 
@@ -117,7 +123,7 @@
                                         <div class="amAndpm">
                                             <button id="amAndpm">am</button>
                                         </div>
-                                        <div>28-01-2023</div>
+                                        <div>2023-1-31</div>
                                     </div>
                                 </th>
                         </tr>
@@ -131,17 +137,27 @@
 
                 <div class="bookAndReserve">
                     <button id="sendDate" disabled class="bookBtn">book</button>
+                    @if (!session('user'))
+                    <div id="book">
+                        {{-- JAVASCRIPT --}}
+                        You need to login to make your resrvation
+                    </div>
+                    @else
                     <div id="book">
                         {{-- JAVASCRIPT --}}
                         click to choose your time
                     </div>
+                    @endif
                 </div>
                 @if (session('user'))
                 <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
                 @endif
+                <input  type="hidden" id="eventId"  name="eventId" value="{{$event->id}}">
                 <script>
                     
                   let userId = document.getElementById('user').value
+                  let eventId = document.getElementById('eventId').value
+                //   console.log(eventId)
                   let amAndpm = document.getElementById('amAndpm')
                 //   console.log(amAndpm.innerHTML)
                   amAndpm.addEventListener('click',()=>{
@@ -171,41 +187,32 @@
                         }else{
                             arr = arr.filter(e => e != id)
                         }
-                        hour[id - 1].classList.toggle("onCount")
-                        
-                        // console.log(hour[id-1])
+                        hour[id - 1].classList.toggle("onCount")                        
                         arr.sort(function(a, b){return a-b});
                         retrieveData()
                     }
-                    // let bookBtn = document.getElementsByClassName('bookBtn')[0]
                     let bookBtn = document.getElementById('sendDate')
                     function retrieveData(){
                         let book = document.getElementById('book')
-                        book.innerHTML = `you reserved at ${arr.join(' - ')}`
+                        book.innerHTML = `you would reserve at ${arr.join(' - ')}`
                         book.style.marginTop = '25px'
-                        // console.log(bookBtn)
                         bookBtn.classList.add('table-btn')
-                        bookBtn.disabled = false
-                        
-                        console.log(arr.join('-'))
-                        
+                        bookBtn.disabled = false                        
                     }
-                    // bookBtn.addEventListener('click',()=>{
-                    //         console.log('arr')
-                    // })
                     bookBtn.addEventListener('click',()=>{
                      console.log(arr)
+                     book.innerHTML = `your reservation will be confirmed in 24 hours to pursuit your application check your profile`
                      var dateObj = new Date();
                     var month = dateObj.getUTCMonth() + 1; //months from 1-12
                     var day = dateObj.getUTCDate();
                     var year = dateObj.getUTCFullYear();
 
                     newdate = year + "-" + month + "-" + day;
-                    eventId = window.location.href.slice(-1)
+                    // eventId = window.location.href.slice(-1)
                      let data = {
                         hours: arr.join('-'),
-                        // date: newdate,
-                        date: '2023-1-30',
+                        date: newdate,
+                        date: '2023-1-31',
                         event_id: eventId,
                         user_id: userId,
                      }
@@ -219,7 +226,6 @@
                     })
                     .then(response => response.json())
                     .then(json => console.log(json));
-
                   })
 
 fetch("http://127.0.0.1:8000/api/books")

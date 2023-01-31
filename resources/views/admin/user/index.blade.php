@@ -6,6 +6,9 @@
     background-color: #007bff !important;
     
   }
+  td{
+    line-height: 100px
+  }
 </style>
 
 
@@ -40,12 +43,12 @@
   <thead class="table table-striped text-white thead-dark">
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Image</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Mobile</th>
-      <th scope="col">Password</th>      
+      {{-- <th scope="col">Mobile</th> --}}
+      {{-- <th scope="col">Password</th>       --}}
       <th scope="col">Role</th>
-      <th scope="col">Image</th>
       <th scope="col">Edit</th>
       <th scope="col">Delate</th>
     </tr>
@@ -56,25 +59,29 @@
       {{-- {{$user}} --}}
       
       <th>{{$user->id}}</th>
-      <td>{{$user->name}}</td>
-      <td>{{$user->email}}</td>
-      <td>{{$user->email_verified_at}}</td>
-      <td>{{$user->password}}</td>
-      <td>{{$user->role}}</td>
       <td>
         @if($user->image != null)
-        <img src="{{asset('images/'.$user->image->url)}}" style="height: 100px; width:150px; display:block">
+        <img src="{{asset('images/'.$user->image->url)}}" style="height: 100px; width:100px; display:block; border-radius:50%;">
         @endif
       </td>
+      <td>{{$user->name}}</td>
+      <td>{{$user->email}}</td>
+      {{-- <td>{{$user->email_verified_at}}</td> --}}
+      {{-- <td>{{$user->password}}</td> --}}
+      @if ($user->role == 1)
+      <td>Admin</td>
+      @else
+      <td>user</td>
+      @endif
 
       <td>   
-        <a class="btn btn-primary" href="{{route('user.edit',$user->id)}}">Edit User </a>
+        <a class="btn btn-primary mt-4" href="{{route('user.edit',$user->id)}}">Edit User </a>
       </td>
       <td> 
         <form action="{{Route('user.destroy',$user->id)}}" method="POST" >
         @method('DELETE')
         @csrf
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn btn-danger mt-4">Delete</button>
       </form>
     </td>
   </tbody>

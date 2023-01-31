@@ -18,6 +18,7 @@ class Board
     public function handle(Request $request, Closure $next)
     {
         $role = Session::get('user')?->role;
+        // dd($role);
         if($role == 1){
             return $next($request);
             // dd('hello');

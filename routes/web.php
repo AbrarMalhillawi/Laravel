@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,9 +69,11 @@ Route::get('/userShow', function () {
 Route::get('/zzz', function () {
     // $value = session('key');
         // echo session('key') . "<br>";
-        echo session('user')->id . "<br>";
-        echo session('user')->id . "<br>";
-        echo Session::get('user')->id;
+        // echo session('user')->id . "<br>";
+        // echo session('user')->role . "<br>";
+        // echo Session::get('user')->id;
+        $book = DB::table('books')->where('user_id', 2)->get();
+        dd($book);
     // return session()->flush();
         // $users = User::all();
         // foreach($users as $user){
@@ -87,7 +90,7 @@ Route::get('/zzz', function () {
 
 
 Route::resource('activity',ActivityController ::class)->middleware('board');
-Route::resource('booking',BookingController ::class);
+Route::resource('booking',BookingController ::class)->middleware('board');
 Route::resource('user',UserController ::class)->middleware('board');
 Route::resource('event',EventController ::class);
 
@@ -111,4 +114,4 @@ Route::get('userProfile', [CustomAuthController::class, 'userProfile'])->name('u
 // Route::get('login',[CustomAuthController::class,'login']);
 // Route::post('postlogin', [CustomAuthController::class, 'signin'])->name('postlogin');
 
-Route::get('confirm', [BookingController::class, 'confirm'])->name('confirm');
+Route::get('confirm', [BookingController::class, 'confirm'])->name('confirm')->middleware('board');

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class userController extends Controller
 {
@@ -109,7 +110,9 @@ class userController extends Controller
      */
     public function edit($id)
     {
-        
+        if(count(Event::all()) < $id || $id < 0){
+            return redirect()->back();
+        }
         return view('admin.user.edit', [
             'user' => User::findOrFail($id)
         ]);
@@ -145,7 +148,9 @@ class userController extends Controller
     {
         $user=User::findorfail($id);
     //   $user->users()->detach();
-      $user->delete();
+        DB::table('books')->where('user_id', $id)->delete();
+
+        $user->delete();
  
       return redirect()->route('user.index');
     }
