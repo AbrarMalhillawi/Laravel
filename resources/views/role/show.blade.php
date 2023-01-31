@@ -85,7 +85,8 @@
                 <h1 class="helowolrd">{{$event->name}}</h1>
                 <p><span style="font-size:1.2rem">Details:</span> {{$event->description}}.</p>
                 <p><span style="font-size:1.2rem">Price:</span> {{$event->price}}jd</p>
-            
+                <p class="notezohde"><span style="font-size:1.2rem">note:</span> if you clicked on 5 that means your resrvation from 04 to 05 am</p>
+                
 
                 {{-- <div class="description"> --}}
                 
@@ -188,7 +189,7 @@
                     let bookBtn = document.getElementById('sendDate')
                     function retrieveData(){
                         let book = document.getElementById('book')
-                        book.innerHTML = `you reserved at ${arr.join(' - ')}`
+                        book.innerHTML = `you would reserve at ${arr.join(' - ')}`
                         book.style.marginTop = '25px'
                         bookBtn.classList.add('table-btn')
                         bookBtn.disabled = false                        

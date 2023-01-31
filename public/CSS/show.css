@@ -485,10 +485,14 @@ tr {
     width: 150px;
     height: 40px;
 }
-
+.notezohde{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 5px;
+    border-radius: 5px;
+}
 #book{
     width: 70%;
-    background-color: #ccc;
+    background-color: #F7F7F7;
     min-height: 40px;
     height: auto;
     line-height: 40px;
@@ -496,6 +500,7 @@ tr {
     padding-left: 30px;
     font-size: 1.2rem;
     /* padding: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 #sendData{

@@ -135,7 +135,7 @@
                 </div>
                 <div class="col-4 text-right">
                   <button class="btn btn-sm btn-primary" onclick="edit()">Edit</button>
-                  <button class="btn btn-sm btn-primary" onclick="history()">History</button>
+                  <button class="btn btn-sm btn-primary" onclick="history()">Overview</button>
                   
                 </div>
               </div>
@@ -195,7 +195,7 @@
             <div id="history">
               <div class="card-body">
                           <form>
-                            <h6 class="heading-small text-muted mb-4">History</h6>
+                            <h6 class="heading-small text-muted mb-4">Overview</h6>
                            
                             <hr class="my-4">
                             <!-- Address -->
