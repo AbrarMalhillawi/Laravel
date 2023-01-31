@@ -54,6 +54,9 @@ class EventController extends Controller
      */
     public function show($id)
     {
+        if(count(Event::all()) < $id || $id < 0){
+            return redirect()->back();
+        }
         return view('role.show', [
             'event' => Event::findOrFail($id)
         ]);

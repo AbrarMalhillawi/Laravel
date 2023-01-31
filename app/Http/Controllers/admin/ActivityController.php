@@ -106,7 +106,9 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        
+        if(count(Event::all()) < $id || $id < 0){
+            return redirect()->back();
+        }
         return view('admin.activityTable.edit', [
             'event' => Event::findOrFail($id)
         ]);

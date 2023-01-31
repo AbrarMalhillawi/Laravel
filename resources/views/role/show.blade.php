@@ -85,7 +85,9 @@
                 <h1 class="helowolrd">{{$event->name}}</h1>
                 <p><span style="font-size:1.2rem">Details:</span> {{$event->description}}.</p>
                 <p><span style="font-size:1.2rem">Price:</span> {{$event->price}}jd</p>
+                @if (session('user'))
                 <p class="notezohde"><span style="font-size:1.2rem">note:</span> if you clicked on 5 that means your resrvation from 04 to 05 am</p>
+                @endif
                 
 
                 {{-- <div class="description"> --}}
@@ -210,7 +212,7 @@
                      let data = {
                         hours: arr.join('-'),
                         date: newdate,
-                        date: '2023-1-20',
+                        date: '2023-1-31',
                         event_id: eventId,
                         user_id: userId,
                      }
