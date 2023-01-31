@@ -150,9 +150,12 @@
                 @if (session('user'))
                 <input  type="hidden" id="user"  name="user" value="{{session('user')->id}}">
                 @endif
+                <input  type="hidden" id="eventId"  name="eventId" value="{{$event->id}}">
                 <script>
                     
                   let userId = document.getElementById('user').value
+                  let eventId = document.getElementById('eventId').value
+                //   console.log(eventId)
                   let amAndpm = document.getElementById('amAndpm')
                 //   console.log(amAndpm.innerHTML)
                   amAndpm.addEventListener('click',()=>{
@@ -203,11 +206,11 @@
                     var year = dateObj.getUTCFullYear();
 
                     newdate = year + "-" + month + "-" + day;
-                    eventId = window.location.href.slice(-1)
+                    // eventId = window.location.href.slice(-1)
                      let data = {
                         hours: arr.join('-'),
                         date: newdate,
-                        date: '2023-1-31',
+                        date: '2023-1-20',
                         event_id: eventId,
                         user_id: userId,
                      }
