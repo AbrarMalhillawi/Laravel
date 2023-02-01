@@ -18,7 +18,7 @@
 					<li><a href="/about" class="About">About US</a></li>
 					<li><a href="/contact" class="Contact">Contact US</a></li>
 					@if (session('user') && session('user')->role == 1)
-					<li><a href="/booking" class="Contact">Dashboard</a></li>
+					<li><a href="/booking" class="dashbaord">Dashboard</a></li>
 					@endif
 					@if (!session('user'))
 					<li><a href="login" class="Login">Login</a></li>						

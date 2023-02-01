@@ -110,7 +110,7 @@ class userController extends Controller
      */
     public function edit($id)
     {
-        if(count(Event::all()) < $id || $id < 0){
+        if(count(User::all()) < $id || $id <= 0){
             return redirect()->back();
         }
         return view('admin.user.edit', [
